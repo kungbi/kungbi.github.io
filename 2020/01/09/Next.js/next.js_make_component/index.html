@@ -2,6 +2,7 @@
 <html  lang="ko">
 <head>
     <meta charset="utf-8" />
+<link rel="canonical" href="http://kungbi.github.io/2020/01/09/next.js/next.js_make_component/"/>
 
 <meta name="generator" content="Hexo 4.2.0" />
 
@@ -75,6 +76,8 @@
 
 
 <link rel="stylesheet" href="/css/style.css">
+
+<link rel="alternate" href="/atom.xml" title="Kungbi's IT Blog" type="application/atom+xml">
 </head>
 <body class="is-3-column">
     <nav class="navbar navbar-main">
@@ -249,24 +252,17 @@
 <div class="card">
     <div class="card-content">
         <h3 class="title is-5 has-text-weight-normal">댓글</h3>
-        
+        <div id="disqus_thread"></div>
 <script>
-    var disqus_config = function () {
-        this.page.url = 'http://kungbi.github.io/2020/01/09/Next.js/next.js_make_component/';
-        this.page.identifier = '2020/01/09/Next.js/next.js_make_component/';
-    };
-    (function() {
-        var d = document, s = d.createElement('script');  
-        s.src = '//' + 'disqus disqus_5gUfc6kxjo' + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://kungbi-github-io.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
 </script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
-<div id="disqus_thread">
-    
-    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-</div>
     </div>
 </div>
 
@@ -1265,7 +1261,7 @@ document.addEventListener('DOMContentLoaded', function () {
 </script>
 
 
-<a id="back-to-top" title="Back to Top" href="javascript:;">
+<a id="back-to-top" title="Zurück nach oben" href="javascript:;">
     <i class="fas fa-chevron-up"></i>
 </a>
 <script src="/js/back-to-top.js" defer></script>
