@@ -8,96 +8,8 @@
     </url>
 
     <url>
-        <loc>http://kungbi.github.io/2020/02/11/Algorithm/baekjoon-10840/</loc>
-        <lastmod>2020-02-11T08:15:49.020Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://kungbi.github.io/2020/01/01/Web/mvc/</loc>
-        <lastmod>2020-02-11T07:46:05.587Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://kungbi.github.io/2020/01/10/Web/fetch-api-use/</loc>
-        <lastmod>2020-02-11T07:46:05.586Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://kungbi.github.io/2020/01/02/Web/Server-side-rendering-VS-Client-side-rendering/</loc>
-        <lastmod>2020-02-11T07:46:05.585Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://kungbi.github.io/2020/01/03/Next.js/what_is_Next.js/</loc>
-        <lastmod>2020-02-11T07:46:05.583Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://kungbi.github.io/2020/01/09/Next.js/next.js_make_component/</loc>
-        <lastmod>2020-02-11T07:46:05.582Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://kungbi.github.io/2020/01/12/Next.js/next-js-make-board_1/</loc>
-        <lastmod>2020-02-11T07:46:05.580Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://kungbi.github.io/2020/01/03/Next.js/make_project_with_nex.js/</loc>
-        <lastmod>2020-02-11T07:46:05.579Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://kungbi.github.io/2020/01/03/Next.js/Next.js%20Link%20API/</loc>
-        <lastmod>2020-02-11T07:46:05.577Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://kungbi.github.io/2020/02/04/C++/what-is-stl/</loc>
-        <lastmod>2020-02-11T07:46:05.576Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://kungbi.github.io/2020/01/26/Booster/new-category-boostcourse/</loc>
-        <lastmod>2020-02-11T07:46:05.572Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://kungbi.github.io/2020/01/29/Booster/http-protocol/</loc>
-        <lastmod>2020-02-11T07:46:05.569Z</lastmod>
+        <loc>http://kungbi.github.io/2020/02/13/Booster/what-is-was/</loc>
+        <lastmod>2020-02-12T20:44:45.639Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -105,7 +17,95 @@
 
     <url>
         <loc>http://kungbi.github.io/2020/01/30/Booster/how-browser-work/</loc>
-        <lastmod>2020-02-11T07:46:05.568Z</lastmod>
+        <lastmod>2020-02-12T20:12:15.297Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://kungbi.github.io/2020/01/02/Web/Server-side-rendering-VS-Client-side-rendering/</loc>
+        <lastmod>2020-02-12T17:20:56.178Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://kungbi.github.io/2020/01/01/Web/mvc/</loc>
+        <lastmod>2020-02-12T17:20:52.842Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://kungbi.github.io/2020/01/10/Web/fetch-api-use/</loc>
+        <lastmod>2020-02-12T17:20:49.312Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://kungbi.github.io/2020/01/03/Next.js/Next.js%20Link%20API/</loc>
+        <lastmod>2020-02-12T17:20:40.817Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://kungbi.github.io/2020/01/12/Next.js/next-js-make-board_1/</loc>
+        <lastmod>2020-02-12T17:20:33.439Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://kungbi.github.io/2020/01/09/Next.js/next.js_make_component/</loc>
+        <lastmod>2020-02-12T17:20:29.088Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://kungbi.github.io/2020/01/03/Next.js/what_is_Next.js/</loc>
+        <lastmod>2020-02-12T17:20:25.704Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://kungbi.github.io/2020/01/03/Next.js/make_project_with_nex.js/</loc>
+        <lastmod>2020-02-12T17:20:21.121Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://kungbi.github.io/2020/02/04/C++/what-is-stl/</loc>
+        <lastmod>2020-02-12T17:20:11.693Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://kungbi.github.io/2020/01/29/Booster/http-protocol/</loc>
+        <lastmod>2020-02-12T17:20:00.103Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://kungbi.github.io/2020/01/26/Booster/new-category-boostcourse/</loc>
+        <lastmod>2020-02-12T17:19:48.637Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -113,7 +113,7 @@
 
     <url>
         <loc>http://kungbi.github.io/2020/01/20/Algorithm/new-category-algorithm/</loc>
-        <lastmod>2020-02-11T07:46:05.566Z</lastmod>
+        <lastmod>2020-02-12T17:19:12.878Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -121,7 +121,15 @@
 
     <url>
         <loc>http://kungbi.github.io/2020/02/11/Algorithm/baekjoon-10837/</loc>
-        <lastmod>2020-02-11T07:46:05.563Z</lastmod>
+        <lastmod>2020-02-12T17:19:01.732Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://kungbi.github.io/2020/02/11/Algorithm/baekjoon-10840/</loc>
+        <lastmod>2020-02-12T17:18:46.482Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 

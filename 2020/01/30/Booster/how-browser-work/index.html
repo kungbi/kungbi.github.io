@@ -20,7 +20,7 @@
 <meta property="og:locale" content="ko_KR">
 <meta property="og:image" content="http://kungbi.github.io/gallery/frowny-guy-in-front-of-browsers.png">
 <meta property="article:published_time" content="2020-01-29T18:19:08.000Z">
-<meta property="article:modified_time" content="2020-02-11T07:46:05.568Z">
+<meta property="article:modified_time" content="2020-02-12T20:12:15.297Z">
 <meta property="article:author" content="Woongbi Shin">
 <meta property="article:tag" content="부스트코스">
 <meta property="article:tag" content="web">
@@ -80,7 +80,7 @@
 
 <link rel="alternate" href="/atom.xml" title="Kungbi's IT Blog" type="application/atom+xml">
 </head>
-<body class="is-3-column">
+<body class="is-2-column">
     <nav class="navbar navbar-main">
     <div class="container">
         <div class="navbar-brand is-flex-center">
@@ -122,6 +122,10 @@
                     
                 
                 
+                <a class="navbar-item is-hidden-tablet catalogue" title="카탈로그" href="javascript:;">
+                    <i class="fas fa-list-ul"></i>
+                </a>
+                
                 
                 <a class="navbar-item search" title="검색" href="javascript:;">
                     <i class="fas fa-search"></i>
@@ -135,7 +139,7 @@
     <section class="section">
         <div class="container">
             <div class="columns">
-                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main">
+                <div class="column is-8-tablet is-8-desktop is-8-widescreen has-order-2 column-main">
 <div class="card">
     
     <div class="card-image">
@@ -184,8 +188,9 @@
 <hr>
 <h2 id="브라우저-기본-구조"><a href="#브라우저-기본-구조" class="headerlink" title="브라우저 기본 구조"></a>브라우저 기본 구조</h2><p>브라우저는 여러 많은 종류가 있다. Chrome, Explorer, Firefox 등 말이다. 그런데 기본적인 구조는 동일하다. 다음은 브라우저의 기본 구조이다.</p>
 <p align='center'><img src='/gallery/helloworld-59361-1.png'/></p>
+#### 사용자 인터페이스
 
-<h4 id="사용자-인터페이스"><a href="#사용자-인터페이스" class="headerlink" title="사용자 인터페이스"></a>사용자 인터페이스</h4><p>주소 표시줄, 이전/다음 버튼, 북마크 등 사용자가 직접 볼 수 있고, 활용할 수 있는 서비스들.</p>
+<p>주소 표시줄, 이전/다음 버튼, 북마크 등 사용자가 직접 볼 수 있고, 활용할 수 있는 서비스들.</p>
 <h4 id="브라우저-엔진"><a href="#브라우저-엔진" class="headerlink" title="브라우저 엔진"></a>브라우저 엔진</h4><p>사용자 인터페이스와 렌더링 엔진 사이의 동작 제어.</p>
 <h4 id="렌더링-엔진"><a href="#렌더링-엔진" class="headerlink" title="렌더링 엔진"></a>렌더링 엔진</h4><p>받은 리소스들을 표시, HTML CSS JavaScript를 해석해 화면에 그려준다.</p>
 <h4 id="통신"><a href="#통신" class="headerlink" title="통신"></a>통신</h4><p>HTTP 요청과 같은 네트워크 통신에 사용된다.</p>
@@ -197,11 +202,10 @@
 <p>렌더링 엔진은 HTML 및 XML 문서와 이미지를 표시할 수 있다. 물론 플러그인이나 브라우저 확장 기능을 이용해 PDF와 같은 다른 유형도 표시할 수 있다. </p>
 <p>렌더링 엔진은 여러 종류가 있는데, <a href="https://ko.wikipedia.org/wiki/게코_(레이아웃_엔진)">게코</a>(Gecko), <a href="https://ko.wikipedia.org/wiki/블링크_(레이아웃_엔진)">블링크</a>(Blink), <a href="https://ko.wikipedia.org/wiki/웹키트">웹키트</a>(Webkit) 등 여러개가 존재한다. </p>
 <h3 id="동작-과정"><a href="#동작-과정" class="headerlink" title="동작 과정"></a>동작 과정</h3><p align='center'><img src='/gallery/helloworld-59361-2.png'/></p>
+1. **DOM** 이란 Document Object Model 이다. HTML를 하나의 **객체 트리**로 만들어, 프로그래밍 언어(JavaScript)가 DOM 구조에 접근할 수 있는 방법을 제공하여 그들이 문서 구조, 스타일, 내용 등을 변경할 수 있게 돕는다.
 
-<ol>
-<li><p><strong>DOM</strong> 이란 Document Object Model 이다. HTML를 하나의 <strong>객체 트리</strong>로 만들어, 프로그래밍 언어(JavaScript)가 DOM 구조에 접근할 수 있는 방법을 제공하여 그들이 문서 구조, 스타일, 내용 등을 변경할 수 있게 돕는다.</p>
-<p>DOM은 HTML을 토대로 객체로 만들어 트리형식으로 <strong>DOM 트리</strong> 를 구축하게 된다.</p>
-</li>
+<p>   DOM은 HTML을 토대로 객체로 만들어 트리형식으로 <strong>DOM 트리</strong> 를 구축하게 된다.</p>
+<ol start="2">
 <li><p>그리고 외부 CSS파일과 함께 포함된 스타일 요소들을 파싱한다. 스타일 정보와 HTML 표시 규칙은 <strong>렌더 트리</strong> 라는 또하나의 트리를 생성한다.</p>
 </li>
 <li><p>렌더 트리 생성이 끝나면 <strong>배치</strong>가 시작되는데 이것은 각 노드가 화면의 <strong>정확한 위치</strong>에 표시되는 것을 의미한다. </p>
@@ -211,14 +215,14 @@
 </ol>
 <p><span style='color:gray;'>❖ 이 과정은 1, 2, 3, 4 순서대로 동기적으로 이루어지는 것이 아니라 모든 HTML이을 파싱할할때 까지 기다리지 않고 파싱이 되는대로 배치 -&gt; 그리기를 반복한다고 한다. 웹사이트에 들어가게 되면 한번에 뜨지않고 부분부분 나오는 이유.</span></p>
 <h3 id="동작-과정-예"><a href="#동작-과정-예" class="headerlink" title="동작 과정 예"></a>동작 과정 예</h3><p align='center'><img src='/gallery/helloworld-59361-3.png'/></p>
+---
 
-<hr>
 <h2 id="파싱과-DOM-트리-구축"><a href="#파싱과-DOM-트리-구축" class="headerlink" title="파싱과 DOM 트리 구축"></a>파싱과 DOM 트리 구축</h2><p>파싱은 렌더링에서 매우 중요한 개념이다. 문서 <strong>파싱</strong>은 브라우저가 코드를 이해하고 사용할 수 있는 구조로 변환하는 것을 의미한다.</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>Hello World<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"example.png"</span> /&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p align='center'><img src='/gallery/helloworld-59361-8.png'/></p>
+다음과 같이 html 태그 아래 body태그 아래 p태그 와 div태그가 있고 p 태그 아래에는 텍스트가 div태그 아래에는 img 태그가 존재한다. 이를 파싱해 트리형태로 DOM을 구현한다. 
 
-<p>다음과 같이 html 태그 아래 body태그 아래 p태그 와 div태그가 있고 p 태그 아래에는 텍스트가 div태그 아래에는 img 태그가 존재한다. 이를 파싱해 트리형태로 DOM을 구현한다. </p>
 <p><br/><p align='center'><img src='/gallery/hufs_booster.jpg'/></p></p>
 
         </div>
@@ -288,134 +292,73 @@ s.setAttribute('data-timestamp', +new Date());
 
 </div>
                 
+                
 
 
 
 
-<div class="column is-4-tablet is-4-desktop is-3-widescreen  has-order-1 column-left ">
+<div class="column is-4-tablet is-4-desktop is-4-widescreen  has-order-3 column-right is-sticky">
     
         
-<div class="card widget">
-    <div class="card-content">
-        <nav class="level">
-            <div class="level-item has-text-centered" style="flex-shrink: 1">
-                <div>
-                    
-                    <figure class="image is-128x128 has-mb-6">
-                        <img class="" src="/images/avatar.png" alt="Kungbi">
-                    </figure>
-                    
-                    <p class="is-size-4 is-block">
-                        Kungbi
-                    </p>
-                    
-                    
-                    <p class="is-size-6 is-block">
-                        호기심 많은 초보 개발자
-                    </p>
-                    
-                    
-                </div>
-            </div>
-        </nav>
-        <nav class="level is-mobile">
-            <div class="level-item has-text-centered is-marginless">
-                <div>
-                    <p class="heading">
-                        포스트
-                    </p>
-                    <a href="/archives">
-                        <p class="title has-text-weight-normal">
-                            15
-                        </p>
-                    </a>
-                </div>
-            </div>
-            <div class="level-item has-text-centered is-marginless">
-                <div>
-                    <p class="heading">
-                        카테고리
-                    </p>
-                    <a href="/categories">
-                        <p class="title has-text-weight-normal">
-                            6
-                        </p>
-                    </a>
-                </div>
-            </div>
-            <div class="level-item has-text-centered is-marginless">
-                <div>
-                    <p class="heading">
-                        태그
-                    </p>
-                    <a href="/tags">
-                        <p class="title has-text-weight-normal">
-                            18
-                        </p>
-                    </a>
-                </div>
-            </div>
-        </nav>
-        
-        <div class="level">
-            <a class="level-item button is-link" style='background: #3B3B3B' href="mailto:kipper12335@gmail.com" target="_blank" rel="noopener">
-                팔로우</a>
-        </div>
-        
-        
-        
-        <div class="level is-mobile">
-            
-            <a class="level-item button is-white is-marginless" target="_blank" rel="noopener"
-                title="Github" href="https://github.com/kungbi">
-                
-                <i class="fab fa-github"></i>
-                
-            </a>
-            
-            <a class="level-item button is-white is-marginless" target="_blank" rel="noopener"
-                title="Facebook" href="https://www.facebook.com/profile.php?id=100006377837419">
-                
-                <i class="fab fa-facebook"></i>
-                
-            </a>
-            
-            <a class="level-item button is-white is-marginless" target="_blank" rel="noopener"
-                title="RSS" href="/">
-                
-                <i class="fas fa-rss"></i>
-                
-            </a>
-            
-        </div>
-        
-    </div>
-</div>
 
-    
-        <div class="card widget">
-    <div class="card-content">
-        <div class="menu">
-        <h3 class="menu-label">
-            링크
-        </h3>
-        <ul class="menu-list">
-        
-            <li>
-                <a class="level is-mobile" href="https://github.com/kungbi" target="_blank" rel="noopener">
-                    <span class="level-left">
-                        <span class="level-item">Github</span>
-                    </span>
-                    <span class="level-right">
-                        <span class="level-item tag">github.com</span>
-                    </span>
-                </a>
-            </li>
-        
-        </ul>
+    <div class="card widget" id="toc">
+        <div class="card-content">
+            <div class="menu">
+                <h3 class="menu-label">
+                    카탈로그
+                </h3>
+                <ul class="menu-list"><li>
+        <a class="is-flex" href="#브라우저의-주요기능">
+        <span class="has-mr-6">1</span>
+        <span>브라우저의 주요기능</span>
+        </a></li><li>
+        <a class="is-flex" href="#브라우저-기본-구조">
+        <span class="has-mr-6">2</span>
+        <span>브라우저 기본 구조</span>
+        </a><ul class="menu-list"><ul class="menu-list"><li>
+        <a class="is-flex" href="#브라우저-엔진">
+        <span class="has-mr-6">2.1.1</span>
+        <span>브라우저 엔진</span>
+        </a></li><li>
+        <a class="is-flex" href="#렌더링-엔진">
+        <span class="has-mr-6">2.1.2</span>
+        <span>렌더링 엔진</span>
+        </a></li><li>
+        <a class="is-flex" href="#통신">
+        <span class="has-mr-6">2.1.3</span>
+        <span>통신</span>
+        </a></li><li>
+        <a class="is-flex" href="#자바스크립트-해석기">
+        <span class="has-mr-6">2.1.4</span>
+        <span>자바스크립트 해석기</span>
+        </a></li><li>
+        <a class="is-flex" href="#UI-백엔드">
+        <span class="has-mr-6">2.1.5</span>
+        <span>UI 백엔드</span>
+        </a></li><li>
+        <a class="is-flex" href="#자료-저장소">
+        <span class="has-mr-6">2.1.6</span>
+        <span>자료 저장소</span>
+        </a></li></ul></ul></li><li>
+        <a class="is-flex" href="#렌더링-엔진-1">
+        <span class="has-mr-6">3</span>
+        <span>렌더링 엔진</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#동작-과정">
+        <span class="has-mr-6">3.1</span>
+        <span>동작 과정</span>
+        </a></li><li>
+        <a class="is-flex" href="#동작-과정-예">
+        <span class="has-mr-6">3.2</span>
+        <span>동작 과정 예</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#파싱과-DOM-트리-구축">
+        <span class="has-mr-6">4</span>
+        <span>파싱과 DOM 트리 구축</span>
+        </a></li></ul>
+            </div>
         </div>
     </div>
-</div>
 
     
         
@@ -432,7 +375,7 @@ s.setAttribute('data-timestamp', +new Date());
                 <span class="level-item">Devlog</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">15</span>
+                <span class="level-item tag">16</span>
             </span>
         </a><ul><li>
         <a class="level is-marginless" href="/categories/Devlog/Algorithm/">
@@ -448,7 +391,7 @@ s.setAttribute('data-timestamp', +new Date());
                 <span class="level-item">Boost Course</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">3</span>
+                <span class="level-item tag">4</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/Devlog/C/">
@@ -480,597 +423,12 @@ s.setAttribute('data-timestamp', +new Date());
     </div>
 </div>
     
-    
-        <div class="column-right-shadow is-hidden-widescreen ">
-        
-            
-        
-            <div class="card widget">
-    <div class="card-content">
-        <h3 class="menu-label">
-            최근 글
-        </h3>
-        
-        <article class="media">
-            
-            <a href="/2020/02/11/Algorithm/baekjoon-10837/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/gallery/baekjoon.png" alt="백준 10837번 문제">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-11T06:47:29.000Z">2020-02-11</time></div>
-                    <a href="/2020/02/11/Algorithm/baekjoon-10837/" class="title has-link-black-ter is-size-6 has-text-weight-normal">백준 10837번 문제</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Devlog/">Devlog</a> / <a class="has-link-grey -link" href="/categories/Devlog/Algorithm/">Algorithm</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2020/02/11/Algorithm/baekjoon-10840/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/gallery/baekjoon.png" alt="백준 10840번 문제">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-11T06:47:29.000Z">2020-02-11</time></div>
-                    <a href="/2020/02/11/Algorithm/baekjoon-10840/" class="title has-link-black-ter is-size-6 has-text-weight-normal">백준 10840번 문제</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Devlog/">Devlog</a> / <a class="has-link-grey -link" href="/categories/Devlog/Algorithm/">Algorithm</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2020/02/04/C++/what-is-stl/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="[C++] STL 이란">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-04T04:22:38.000Z">2020-02-04</time></div>
-                    <a href="/2020/02/04/C++/what-is-stl/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[C++] STL 이란</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Devlog/">Devlog</a> / <a class="has-link-grey -link" href="/categories/Devlog/C/">C++</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2020/01/30/Booster/how-browser-work/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/gallery/frowny-guy-in-front-of-browsers.png" alt="[부스트코스] 브라우저의 작동 방식">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-01-29T18:19:08.000Z">2020-01-30</time></div>
-                    <a href="/2020/01/30/Booster/how-browser-work/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[부스트코스] 브라우저의 작동 방식</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Devlog/">Devlog</a> / <a class="has-link-grey -link" href="/categories/Devlog/Boost-Course/">Boost Course</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2020/01/29/Booster/http-protocol/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/gallery/http.png" alt="[부스트코스] HTTP 프로토콜이란?">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-01-28T16:23:19.000Z">2020-01-29</time></div>
-                    <a href="/2020/01/29/Booster/http-protocol/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[부스트코스] HTTP 프로토콜이란?</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Devlog/">Devlog</a> / <a class="has-link-grey -link" href="/categories/Devlog/Boost-Course/">Boost Course</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-    </div>
-</div>
-        
-            <div class="card widget">
-    <div class="card-content">
-        <div class="menu">
-        <h3 class="menu-label">
-            아카이브
-        </h3>
-        <ul class="menu-list">
-        
-        <li>
-            <a class="level is-marginless" href="/archives/2020/02/">
-                <span class="level-start">
-                    <span class="level-item">2월 2020</span>
-                </span>
-                <span class="level-end">
-                    <span class="level-item tag">3</span>
-                </span>
-            </a>
-        </li>
-        
-        <li>
-            <a class="level is-marginless" href="/archives/2020/01/">
-                <span class="level-start">
-                    <span class="level-item">1월 2020</span>
-                </span>
-                <span class="level-end">
-                    <span class="level-item tag">12</span>
-                </span>
-            </a>
-        </li>
-        
-        </ul>
-        </div>
-    </div>
-</div>
-
-        
-            <div class="card widget">
-    <div class="card-content">
-        <div class="menu">
-            <h3 class="menu-label">
-                태그
-            </h3>
-            <div class="field is-grouped is-grouped-multiline">
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/MVC/">
-                        <span class="tag">MVC</span>
-                        <span class="tag is-grey">2</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/ajex/">
-                        <span class="tag">ajex</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/algorithm/">
-                        <span class="tag">algorithm</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/baekjoon/">
-                        <span class="tag">baekjoon</span>
-                        <span class="tag is-grey">2</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/booster/">
-                        <span class="tag">booster</span>
-                        <span class="tag is-grey">2</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/browser/">
-                        <span class="tag">browser</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/c/">
-                        <span class="tag">c++</span>
-                        <span class="tag is-grey">2</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/fetch/">
-                        <span class="tag">fetch</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/hash/">
-                        <span class="tag">hash</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/http/">
-                        <span class="tag">http</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/next-js/">
-                        <span class="tag">next.js</span>
-                        <span class="tag is-grey">5</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/protocol/">
-                        <span class="tag">protocol</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/react/">
-                        <span class="tag">react</span>
-                        <span class="tag is-grey">2</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/react-js/">
-                        <span class="tag">react.js</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/rendering/">
-                        <span class="tag">rendering</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/stl/">
-                        <span class="tag">stl</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/web/">
-                        <span class="tag">web</span>
-                        <span class="tag is-grey">8</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/%EB%B6%80%EC%8A%A4%ED%8A%B8%EC%BD%94%EC%8A%A4/">
-                        <span class="tag">부스트코스</span>
-                        <span class="tag is-grey">3</span>
-                    </a>
-                </div>
-                
-            </div>
-        </div>
-    </div>
-</div>
-        
-            <div class="card widget">
-    <div class="card-content">
-        <h3 class="menu-label">
-            태그 클라우드
-        </h3>
-        <a href="/tags/MVC/" style="font-size: 12.5px;">MVC</a> <a href="/tags/ajex/" style="font-size: 10px;">ajex</a> <a href="/tags/algorithm/" style="font-size: 10px;">algorithm</a> <a href="/tags/baekjoon/" style="font-size: 12.5px;">baekjoon</a> <a href="/tags/booster/" style="font-size: 12.5px;">booster</a> <a href="/tags/browser/" style="font-size: 10px;">browser</a> <a href="/tags/c/" style="font-size: 12.5px;">c++</a> <a href="/tags/fetch/" style="font-size: 10px;">fetch</a> <a href="/tags/hash/" style="font-size: 10px;">hash</a> <a href="/tags/http/" style="font-size: 10px;">http</a> <a href="/tags/next-js/" style="font-size: 17.5px;">next.js</a> <a href="/tags/protocol/" style="font-size: 10px;">protocol</a> <a href="/tags/react/" style="font-size: 12.5px;">react</a> <a href="/tags/react-js/" style="font-size: 10px;">react.js</a> <a href="/tags/rendering/" style="font-size: 10px;">rendering</a> <a href="/tags/stl/" style="font-size: 10px;">stl</a> <a href="/tags/web/" style="font-size: 20px;">web</a> <a href="/tags/%EB%B6%80%EC%8A%A4%ED%8A%B8%EC%BD%94%EC%8A%A4/" style="font-size: 15px;">부스트코스</a>
-    </div>
-</div>
-        
-        </div>
-    
-</div>
-
-                
-
-
-
-
-<div class="column is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only has-order-3 column-right ">
-    
-        
-    
-        <div class="card widget">
-    <div class="card-content">
-        <h3 class="menu-label">
-            최근 글
-        </h3>
-        
-        <article class="media">
-            
-            <a href="/2020/02/11/Algorithm/baekjoon-10837/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/gallery/baekjoon.png" alt="백준 10837번 문제">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-11T06:47:29.000Z">2020-02-11</time></div>
-                    <a href="/2020/02/11/Algorithm/baekjoon-10837/" class="title has-link-black-ter is-size-6 has-text-weight-normal">백준 10837번 문제</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Devlog/">Devlog</a> / <a class="has-link-grey -link" href="/categories/Devlog/Algorithm/">Algorithm</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2020/02/11/Algorithm/baekjoon-10840/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/gallery/baekjoon.png" alt="백준 10840번 문제">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-11T06:47:29.000Z">2020-02-11</time></div>
-                    <a href="/2020/02/11/Algorithm/baekjoon-10840/" class="title has-link-black-ter is-size-6 has-text-weight-normal">백준 10840번 문제</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Devlog/">Devlog</a> / <a class="has-link-grey -link" href="/categories/Devlog/Algorithm/">Algorithm</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2020/02/04/C++/what-is-stl/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="[C++] STL 이란">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-04T04:22:38.000Z">2020-02-04</time></div>
-                    <a href="/2020/02/04/C++/what-is-stl/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[C++] STL 이란</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Devlog/">Devlog</a> / <a class="has-link-grey -link" href="/categories/Devlog/C/">C++</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2020/01/30/Booster/how-browser-work/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/gallery/frowny-guy-in-front-of-browsers.png" alt="[부스트코스] 브라우저의 작동 방식">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-01-29T18:19:08.000Z">2020-01-30</time></div>
-                    <a href="/2020/01/30/Booster/how-browser-work/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[부스트코스] 브라우저의 작동 방식</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Devlog/">Devlog</a> / <a class="has-link-grey -link" href="/categories/Devlog/Boost-Course/">Boost Course</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2020/01/29/Booster/http-protocol/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/gallery/http.png" alt="[부스트코스] HTTP 프로토콜이란?">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-01-28T16:23:19.000Z">2020-01-29</time></div>
-                    <a href="/2020/01/29/Booster/http-protocol/" class="title has-link-black-ter is-size-6 has-text-weight-normal">[부스트코스] HTTP 프로토콜이란?</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Devlog/">Devlog</a> / <a class="has-link-grey -link" href="/categories/Devlog/Boost-Course/">Boost Course</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-    </div>
-</div>
-    
-        <div class="card widget">
-    <div class="card-content">
-        <div class="menu">
-        <h3 class="menu-label">
-            아카이브
-        </h3>
-        <ul class="menu-list">
-        
-        <li>
-            <a class="level is-marginless" href="/archives/2020/02/">
-                <span class="level-start">
-                    <span class="level-item">2월 2020</span>
-                </span>
-                <span class="level-end">
-                    <span class="level-item tag">3</span>
-                </span>
-            </a>
-        </li>
-        
-        <li>
-            <a class="level is-marginless" href="/archives/2020/01/">
-                <span class="level-start">
-                    <span class="level-item">1월 2020</span>
-                </span>
-                <span class="level-end">
-                    <span class="level-item tag">12</span>
-                </span>
-            </a>
-        </li>
-        
-        </ul>
-        </div>
-    </div>
-</div>
-
-    
-        <div class="card widget">
-    <div class="card-content">
-        <div class="menu">
-            <h3 class="menu-label">
-                태그
-            </h3>
-            <div class="field is-grouped is-grouped-multiline">
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/MVC/">
-                        <span class="tag">MVC</span>
-                        <span class="tag is-grey">2</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/ajex/">
-                        <span class="tag">ajex</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/algorithm/">
-                        <span class="tag">algorithm</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/baekjoon/">
-                        <span class="tag">baekjoon</span>
-                        <span class="tag is-grey">2</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/booster/">
-                        <span class="tag">booster</span>
-                        <span class="tag is-grey">2</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/browser/">
-                        <span class="tag">browser</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/c/">
-                        <span class="tag">c++</span>
-                        <span class="tag is-grey">2</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/fetch/">
-                        <span class="tag">fetch</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/hash/">
-                        <span class="tag">hash</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/http/">
-                        <span class="tag">http</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/next-js/">
-                        <span class="tag">next.js</span>
-                        <span class="tag is-grey">5</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/protocol/">
-                        <span class="tag">protocol</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/react/">
-                        <span class="tag">react</span>
-                        <span class="tag is-grey">2</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/react-js/">
-                        <span class="tag">react.js</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/rendering/">
-                        <span class="tag">rendering</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/stl/">
-                        <span class="tag">stl</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/web/">
-                        <span class="tag">web</span>
-                        <span class="tag is-grey">8</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/%EB%B6%80%EC%8A%A4%ED%8A%B8%EC%BD%94%EC%8A%A4/">
-                        <span class="tag">부스트코스</span>
-                        <span class="tag is-grey">3</span>
-                    </a>
-                </div>
-                
-            </div>
-        </div>
-    </div>
-</div>
-    
         <div class="card widget">
     <div class="card-content">
         <h3 class="menu-label">
             태그 클라우드
         </h3>
-        <a href="/tags/MVC/" style="font-size: 12.5px;">MVC</a> <a href="/tags/ajex/" style="font-size: 10px;">ajex</a> <a href="/tags/algorithm/" style="font-size: 10px;">algorithm</a> <a href="/tags/baekjoon/" style="font-size: 12.5px;">baekjoon</a> <a href="/tags/booster/" style="font-size: 12.5px;">booster</a> <a href="/tags/browser/" style="font-size: 10px;">browser</a> <a href="/tags/c/" style="font-size: 12.5px;">c++</a> <a href="/tags/fetch/" style="font-size: 10px;">fetch</a> <a href="/tags/hash/" style="font-size: 10px;">hash</a> <a href="/tags/http/" style="font-size: 10px;">http</a> <a href="/tags/next-js/" style="font-size: 17.5px;">next.js</a> <a href="/tags/protocol/" style="font-size: 10px;">protocol</a> <a href="/tags/react/" style="font-size: 12.5px;">react</a> <a href="/tags/react-js/" style="font-size: 10px;">react.js</a> <a href="/tags/rendering/" style="font-size: 10px;">rendering</a> <a href="/tags/stl/" style="font-size: 10px;">stl</a> <a href="/tags/web/" style="font-size: 20px;">web</a> <a href="/tags/%EB%B6%80%EC%8A%A4%ED%8A%B8%EC%BD%94%EC%8A%A4/" style="font-size: 15px;">부스트코스</a>
+        <a href="/tags/MVC/" style="font-size: 12px;">MVC</a> <a href="/tags/ajex/" style="font-size: 10px;">ajex</a> <a href="/tags/algorithm/" style="font-size: 10px;">algorithm</a> <a href="/tags/baekjoon/" style="font-size: 12px;">baekjoon</a> <a href="/tags/booster/" style="font-size: 14px;">booster</a> <a href="/tags/browser/" style="font-size: 10px;">browser</a> <a href="/tags/c/" style="font-size: 12px;">c++</a> <a href="/tags/fetch/" style="font-size: 10px;">fetch</a> <a href="/tags/hash/" style="font-size: 10px;">hash</a> <a href="/tags/http/" style="font-size: 10px;">http</a> <a href="/tags/next-js/" style="font-size: 18px;">next.js</a> <a href="/tags/protocol/" style="font-size: 10px;">protocol</a> <a href="/tags/react/" style="font-size: 12px;">react</a> <a href="/tags/react-js/" style="font-size: 10px;">react.js</a> <a href="/tags/rendering/" style="font-size: 10px;">rendering</a> <a href="/tags/stl/" style="font-size: 10px;">stl</a> <a href="/tags/was/" style="font-size: 10px;">was</a> <a href="/tags/web/" style="font-size: 20px;">web</a> <a href="/tags/%EB%B6%80%EC%8A%A4%ED%8A%B8%EC%BD%94%EC%8A%A4/" style="font-size: 16px;">부스트코스</a>
     </div>
 </div>
     
