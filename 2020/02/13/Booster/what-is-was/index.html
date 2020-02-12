@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html  lang="ko">
+<html lang="ko">
 <head>
-    <meta charset="utf-8" />
-<link rel="canonical" href="http://kungbi.github.io/2020/02/13/booster/what-is-was/"/>
+    <meta charset="utf-8">
+<link rel="canonical" href="http://kungbi.github.io/2020/02/13/booster/what-is-was/">
 
-<meta name="generator" content="Hexo 4.2.0" />
+<meta name="generator" content="Hexo 4.2.0">
 
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 <title>[부스트코스] WAS란? - Kungbi&#39;s IT Blog</title>
 
@@ -95,27 +95,22 @@
             
             <div class="navbar-start">
                 
-                <a class="navbar-item"
-                href="/">Home</a>
+                <a class="navbar-item" href="/">Home</a>
                 
-                <a class="navbar-item"
-                href="/archives">Archives</a>
+                <a class="navbar-item" href="/archives">Archives</a>
                 
-                <a class="navbar-item"
-                href="/categories">Categories</a>
+                <a class="navbar-item" href="/categories">Categories</a>
                 
-                <a class="navbar-item"
-                href="/tags">Tags</a>
+                <a class="navbar-item" href="/tags">Tags</a>
                 
-                <a class="navbar-item"
-                href="/about">About</a>
+                <a class="navbar-item" href="/about">About</a>
                 
             </div>
             
             <div class="navbar-end">
                 
                     
-                    <a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/kungbi">
+                    <a class="navbar-item" target="_blank" rel="external nofollow noopener noreferrer" title="Download on GitHub" href="https://github.com/kungbi">
                         
                         <i class="fab fa-github"></i>
                         
@@ -144,7 +139,7 @@
 <div class="card">
     
     <div class="card-image">
-        <span  class="image is-7by1">
+        <span class="image is-7by1">
             <img class="thumbnail" src="/gallery/was_large.jpg" alt="[부스트코스] WAS란?">
         </span>
     </div>
@@ -194,11 +189,11 @@
 <li>Web Browser</li>
 </ol>
 <h2 id="DBMS-Database-Management-System"><a href="#DBMS-Database-Management-System" class="headerlink" title="DBMS(Database Management System)"></a>DBMS(Database Management System)</h2><p>DBMS가 만들어지고 초반에는 클라이언트와 DB는 직접 연결되어 있었다. 그래서 그 당시 DB에 접속하여 동작하는 클라이언트 프로그램들이 많이 만들어졌다. 그러나 클라이언트의 로직이 많아지고, 클라이언트의 프로그램 크기가 커지게 되는 문제점이 존재했다. 그리고 한번 로직이 변경되면 클라이언트 프로그램을 다시 배포해야한다는 불편함도 있었다. 게다가 직접 연결하게 되면 보안상의 이유로도 문제가 존재했다. </p>
-<img src='/gallery/DBMS100.png'/>
+<img src="/gallery/DBMS100.png">
 
 <h2 id="미들웨어-Middle-Ware"><a href="#미들웨어-Middle-Ware" class="headerlink" title="미들웨어(Middle Ware)"></a>미들웨어(Middle Ware)</h2><p>클라이언트와 DB가 직접 연결되는 방식은 문제점이 있었다. 그래서 생겨난 것이 바로 <strong>미들웨어</strong>이다.</p>
 <p>미들웨어는 클라이언트와 DB서버 사이에 존재한다. 양쪽에서 데이터를 주고받을 수 있도록 중간에서 매개역할을 하는 소프트웨어이다. 이 미들웨어를 통해서 표준화된 인터페이스를 제공할 수 있으며, 부하 분산을 할 수 있다. 또한 프로그램 로직이 바뀌더라도 다시 배포하지 않고 중앙의 미들웨어만 변경하면 된다.</p>
-<img src='/gallery/1_1_7_.png'/>
+<img src="/gallery/1_1_7_.png">
 
 <h2 id="WAS"><a href="#WAS" class="headerlink" title="WAS"></a>WAS</h2><p>웹이 점점 복잡해지고 점점 복잡한 프로그래밍적인 기능을 요구하게 되었다. 보통 이러한 기능들을 DBMS와의 연관된 경우가 많다고 한다. 그래서 이를 단순화 하고 편리성을 위해 클라이언트와 DBMS사이에 미들웨어가 필요하게 된것이다. 이러한 미들웨어를 WAS라고 한다. WAS도 큰 의미로 미들웨어라고 볼 수 있다. </p>
 <p><strong>WAS의 세가지 중요 기능</strong></p>
@@ -210,11 +205,11 @@
 <p>이렇게 보면 클라이언트의 요청을 처리하는 웹서버가 필요없다고 볼 수도 있다. 왜냐하면 WAS자체의 웹서버가 충분한 기능을 가지고 있기 때문이다. </p>
 <h2 id="WAS-vs-Webserver"><a href="#WAS-vs-Webserver" class="headerlink" title="WAS vs Webserver"></a>WAS vs Webserver</h2><p>웹서버를 사용하지않고 WAS만 사용해도 될 것 같다. 그러나 대부분의 서비스를 보면 이 둘다 사용한다. 그 이유는 무엇일까?</p>
 <p>웹서버는 WAS보다 간단한 구조로 만들어져있다. 사람들이 많이 접속하는 대용량 웹 어플리케이션 같은 경우에는 서버의 수가 여러대일 수도 있다. 가끔씩 개발자의 실수로 서버들 중에 하나가 오작동이 되어 WAS 자체에 문제가 발생하는 경우가 있다. 이런 경우 WAS를 재시작해야한다. 이때 웹서버에서는 문제의 WAS를 이용하지 못하도록 막아놓고 WAS 재시작하면 실제 사용자는 서버가 중단이 됐는지 모르고 이용할 수 있다. 이러한 처리를 장애 <strong>극복 기능</strong>이라 한다. </p>
-<img src='/gallery/1_1_7_was.png'/>
+<img src="/gallery/1_1_7_was.png">
 
 <h2 id="WAS-Apache-Tomcat"><a href="#WAS-Apache-Tomcat" class="headerlink" title="WAS - Apache Tomcat"></a>WAS - Apache Tomcat</h2><p>아파치 소프트웨어 재단의 애플리케이션 서버로 자바서블릿을 실행하고 JSP 코드가 포함되어 있는 웹페이지를 만들어준다 / 자체적으로 보유하고 있는 내부 웹서버와 함께 독립적으로 사용될 수 있지만, 아파치 HTTP 웹 서버나 넷스케이프 엔터프라이즈 서버, IIS 등 다른 웹서버와 함께 사용될 수도 있다 / servlet과 JSP script를 지원하도록 개발했다.</p>
 <p>다음은 Tomcat 버전별 서블릿, JSP, EL Spec, WebSocket, JAVA 지원 버전 목록표이다. </p>
-<img src='/gallery/Screen Shot 2020-02-13 at 5.41.13 AM.png'/>
+<img src="/gallery/Screen Shot 2020-02-13 at 5.41.13 AM.png">
         </div>
         
         <div class="level is-size-7 is-uppercase">
@@ -230,7 +225,7 @@
         
         
 <div class="sharethis-inline-share-buttons"></div>
-<script type='text/javascript' src='//platform-api.sharethis.com/js/sharethis.js#property=5e1094a2f1a1cf0012565702&amp;product=inline-share-buttons&amp;cms=sop' async='async'></script>
+<script type="text/javascript" src="//platform-api.sharethis.com/js/sharethis.js#property=5e1094a2f1a1cf0012565702&amp;product=inline-share-buttons&amp;cms=sop" async="async"></script>
 
         
     </div>
@@ -268,7 +263,7 @@ s.setAttribute('data-timestamp', +new Date());
 (d.head || d.body).appendChild(s);
 })();
 </script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="external nofollow noopener noreferrer" target="_blank">comments powered by Disqus.</a></noscript>
 
     </div>
 </div>
@@ -297,7 +292,7 @@ s.setAttribute('data-timestamp', +new Date());
         </a></li><li>
         <a class="is-flex" href="#클라이언트-lt-–-gt-서버-와의-통신-과정">
         <span class="has-mr-6">2</span>
-        <span>클라이언트 <–> 서버 와의 통신 과정</span>
+        <span>클라이언트 <–> 서버 와의 통신 과정</–></span>
         </a></li><li>
         <a class="is-flex" href="#DBMS-Database-Management-System">
         <span class="has-mr-6">3</span>
@@ -412,8 +407,7 @@ s.setAttribute('data-timestamp', +new Date());
                 </a>
                 <p class="is-size-7">
                 &copy; 2020 Woongbi Shin&nbsp;
-                Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> & <a
-                        href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a>
+                Powered by <a href="https://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a> & <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="external nofollow noopener noreferrer">Icarus</a>
                 
                 </p>
             </div>
@@ -422,7 +416,7 @@ s.setAttribute('data-timestamp', +new Date());
                 <div class="field has-addons is-flex-center-mobile has-mt-5-mobile is-flex-wrap is-flex-middle">
                 
                 <p class="control">
-                    <a class="button is-white is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/">
+                    <a class="button is-white is-large" target="_blank" rel="external nofollow noopener noreferrer" title="Creative Commons" href="https://creativecommons.org/">
                         
                         <i class="fab fa-creative-commons"></i>
                         
@@ -430,7 +424,7 @@ s.setAttribute('data-timestamp', +new Date());
                 </p>
                 
                 <p class="control">
-                    <a class="button is-white is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/">
+                    <a class="button is-white is-large" target="_blank" rel="external nofollow noopener noreferrer" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/">
                         
                         <i class="fab fa-creative-commons-by"></i>
                         
@@ -438,7 +432,7 @@ s.setAttribute('data-timestamp', +new Date());
                 </p>
                 
                 <p class="control">
-                    <a class="button is-white is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/kungbi">
+                    <a class="button is-white is-large" target="_blank" rel="external nofollow noopener noreferrer" title="Download on GitHub" href="https://github.com/kungbi">
                         
                         <i class="fab fa-github"></i>
                         
@@ -490,7 +484,7 @@ var IcarusThemeSettings = {
 
 <div id="outdated">
     <h6>Your browser is out-of-date!</h6>
-    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/" rel="external nofollow noopener noreferrer" target="_blank">Update
             my browser now </a></p>
     <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
 </div>
@@ -530,7 +524,7 @@ document.addEventListener('DOMContentLoaded', function () {
 </script>
 
 
-<a id="back-to-top" title="Zurück nach oben" href="javascript:;">
+<a id="back-to-top" title="Back to Top" href="javascript:;">
     <i class="fas fa-chevron-up"></i>
 </a>
 <script src="/js/back-to-top.js" defer></script>
@@ -554,7 +548,7 @@ document.addEventListener('DOMContentLoaded', function () {
     <div class="searchbox ins-search">
     <div class="searchbox-container ins-search-container">
         <div class="searchbox-input-wrapper">
-            <input type="text" class="searchbox-input ins-search-input" placeholder="입력 하세요..." />
+            <input type="text" class="searchbox-input ins-search-input" placeholder="입력 하세요...">
             <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
         </div>
         <div class="searchbox-result-wrapper ins-section-wrapper">

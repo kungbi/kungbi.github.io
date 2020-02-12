@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html  lang="ko">
+<html lang="ko">
 <head>
-    <meta charset="utf-8" />
-<link rel="canonical" href="http://kungbi.github.io/2020/01/03/next.js/what_is_next.js/"/>
+    <meta charset="utf-8">
+<link rel="canonical" href="http://kungbi.github.io/2020/01/03/next.js/what_is_next.js/">
 
-<meta name="generator" content="Hexo 4.2.0" />
+<meta name="generator" content="Hexo 4.2.0">
 
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 <title>Next.js란? - Kungbi&#39;s IT Blog</title>
 
@@ -94,27 +94,22 @@
             
             <div class="navbar-start">
                 
-                <a class="navbar-item"
-                href="/">Home</a>
+                <a class="navbar-item" href="/">Home</a>
                 
-                <a class="navbar-item"
-                href="/archives">Archives</a>
+                <a class="navbar-item" href="/archives">Archives</a>
                 
-                <a class="navbar-item"
-                href="/categories">Categories</a>
+                <a class="navbar-item" href="/categories">Categories</a>
                 
-                <a class="navbar-item"
-                href="/tags">Tags</a>
+                <a class="navbar-item" href="/tags">Tags</a>
                 
-                <a class="navbar-item"
-                href="/about">About</a>
+                <a class="navbar-item" href="/about">About</a>
                 
             </div>
             
             <div class="navbar-end">
                 
                     
-                    <a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/kungbi">
+                    <a class="navbar-item" target="_blank" rel="external nofollow noopener noreferrer" title="Download on GitHub" href="https://github.com/kungbi">
                         
                         <i class="fab fa-github"></i>
                         
@@ -143,7 +138,7 @@
 <div class="card">
     
     <div class="card-image">
-        <span  class="image is-7by1">
+        <span class="image is-7by1">
             <img class="thumbnail" src="/gallery/71724868-372d7a00-2e75-11ea-833e-bb007ccbab88.png" alt="Next.js란?">
         </span>
     </div>
@@ -178,7 +173,7 @@
             <p>학교 프로젝트를 하다가 웹사이트를 만들어야할 필요가 있어서 Next.js라는 친구를 공부해봤다. 괜찮았고, 계속 공부해볼만한 가치가 있었다.</p>
 <a id="more"></a>
 
-<h2 id="Next-js"><a href="#Next-js" class="headerlink" title="Next.js"></a>Next.js</h2><p>React 프로젝트를 시작할 때 많은 사람들이 <a href="https://github.com/facebook/create-react-app">Create React App</a>을 사용했을 것이다. CRA는 기본적인 React 프로젝트를 생성하기에 좋은 툴이다. 그러나 CRA는 서버에서 페이지를 렌더링 하지 않는다. 오직 클라이언트 사이드 렌더링만 지원한다. 그리고 러닝 커브가 높다. 클라이언트 사이드 라우팅과 페이지 레이아웃 등을 공부해야 하기 때문이다.</p>
+<h2 id="Next-js"><a href="#Next-js" class="headerlink" title="Next.js"></a>Next.js</h2><p>React 프로젝트를 시작할 때 많은 사람들이 <a href="https://github.com/facebook/create-react-app" rel="external nofollow noopener noreferrer" target="_blank">Create React App</a>을 사용했을 것이다. CRA는 기본적인 React 프로젝트를 생성하기에 좋은 툴이다. 그러나 CRA는 서버에서 페이지를 렌더링 하지 않는다. 오직 클라이언트 사이드 렌더링만 지원한다. 그리고 러닝 커브가 높다. 클라이언트 사이드 라우팅과 페이지 레이아웃 등을 공부해야 하기 때문이다.</p>
 <p>이를 해결하고 간편하게 React 프로젝트를 생성할 수 있게 도와주는 Next.js를 소개한다. PHP로 만든 웹페이지를 생각해보자. 라우팅에 대해서 전혀 걱정하지 않았을 것이다. 그러나 React는 따로 라우팅을 해주어야 한다. 이를 대신 처리해 주는 것이 React.js 전용 프레임 워크인 Next.js이다.</p>
 <h3 id="Next-js의-장점"><a href="#Next-js의-장점" class="headerlink" title="Next.js의 장점"></a>Next.js의 장점</h3><ul>
 <li>기본적으로 서버 사이드 렌더링을 해준다.</li>
@@ -189,7 +184,7 @@
 <hr>
 <h2 id="Next-js-동작-방식"><a href="#Next-js-동작-방식" class="headerlink" title="Next.js 동작 방식"></a>Next.js 동작 방식</h2><p>SSR은 서버에서 렌더링 하는 것이다. PHP, JSP가 대표적인 SSR 프레임 워크이다. 미리 html을 작성하여 어떤 유저가 url에 접근하면 그 url에 맞는 html을 전송하는 방식이다. next.js에서의 SSR도 다르지 않다. 서버(node.js)를 실행하고 사용자가 요청하면 html을 생성하여 사용자에게 전송한다. </p>
 <p>다른 점은 모든 요청에 대해서 SSR을 하는 것이 아니라, 초기 렌더링만 해당한다. 그 이후로는 <code>next/router</code>를 통해 렌더링 한다. 이러한 방식으로 SPA의 단점인 초기 렌더링 시간을 줄일 수 있다.</p>
-<img src="https://user-images.githubusercontent.com/16620948/71726642-149e5f80-2e7b-11ea-9314-7ea838d8c087.png" alt="image" style="zoom:70%;" />
+<img src="https://user-images.githubusercontent.com/16620948/71726642-149e5f80-2e7b-11ea-9314-7ea838d8c087.png" alt="image" style="zoom:70%;">
 
 <p>CSR은 Client Side Rendering이다. CSR은 HTML, CSS, JS를 받고 그 이후에 렌더링을 시작한다. </p>
 <p>Next.js는 다음과 같은 순서로 실행 된다.</p>
@@ -216,7 +211,7 @@
         
         
 <div class="sharethis-inline-share-buttons"></div>
-<script type='text/javascript' src='//platform-api.sharethis.com/js/sharethis.js#property=5e1094a2f1a1cf0012565702&amp;product=inline-share-buttons&amp;cms=sop' async='async'></script>
+<script type="text/javascript" src="//platform-api.sharethis.com/js/sharethis.js#property=5e1094a2f1a1cf0012565702&amp;product=inline-share-buttons&amp;cms=sop" async="async"></script>
 
         
     </div>
@@ -261,7 +256,7 @@ s.setAttribute('data-timestamp', +new Date());
 (d.head || d.body).appendChild(s);
 })();
 </script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="external nofollow noopener noreferrer" target="_blank">comments powered by Disqus.</a></noscript>
 
     </div>
 </div>
@@ -389,8 +384,7 @@ s.setAttribute('data-timestamp', +new Date());
                 </a>
                 <p class="is-size-7">
                 &copy; 2020 Woongbi Shin&nbsp;
-                Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> & <a
-                        href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a>
+                Powered by <a href="https://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a> & <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="external nofollow noopener noreferrer">Icarus</a>
                 
                 </p>
             </div>
@@ -399,7 +393,7 @@ s.setAttribute('data-timestamp', +new Date());
                 <div class="field has-addons is-flex-center-mobile has-mt-5-mobile is-flex-wrap is-flex-middle">
                 
                 <p class="control">
-                    <a class="button is-white is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/">
+                    <a class="button is-white is-large" target="_blank" rel="external nofollow noopener noreferrer" title="Creative Commons" href="https://creativecommons.org/">
                         
                         <i class="fab fa-creative-commons"></i>
                         
@@ -407,7 +401,7 @@ s.setAttribute('data-timestamp', +new Date());
                 </p>
                 
                 <p class="control">
-                    <a class="button is-white is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/">
+                    <a class="button is-white is-large" target="_blank" rel="external nofollow noopener noreferrer" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/">
                         
                         <i class="fab fa-creative-commons-by"></i>
                         
@@ -415,7 +409,7 @@ s.setAttribute('data-timestamp', +new Date());
                 </p>
                 
                 <p class="control">
-                    <a class="button is-white is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/kungbi">
+                    <a class="button is-white is-large" target="_blank" rel="external nofollow noopener noreferrer" title="Download on GitHub" href="https://github.com/kungbi">
                         
                         <i class="fab fa-github"></i>
                         
@@ -467,7 +461,7 @@ var IcarusThemeSettings = {
 
 <div id="outdated">
     <h6>Your browser is out-of-date!</h6>
-    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/" rel="external nofollow noopener noreferrer" target="_blank">Update
             my browser now </a></p>
     <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
 </div>
@@ -507,7 +501,7 @@ document.addEventListener('DOMContentLoaded', function () {
 </script>
 
 
-<a id="back-to-top" title="Zurück nach oben" href="javascript:;">
+<a id="back-to-top" title="Back to Top" href="javascript:;">
     <i class="fas fa-chevron-up"></i>
 </a>
 <script src="/js/back-to-top.js" defer></script>
@@ -531,7 +525,7 @@ document.addEventListener('DOMContentLoaded', function () {
     <div class="searchbox ins-search">
     <div class="searchbox-container ins-search-container">
         <div class="searchbox-input-wrapper">
-            <input type="text" class="searchbox-input ins-search-input" placeholder="입력 하세요..." />
+            <input type="text" class="searchbox-input ins-search-input" placeholder="입력 하세요...">
             <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
         </div>
         <div class="searchbox-result-wrapper ins-section-wrapper">

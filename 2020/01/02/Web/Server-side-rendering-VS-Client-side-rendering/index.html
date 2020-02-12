@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html  lang="ko">
+<html lang="ko">
 <head>
-    <meta charset="utf-8" />
-<link rel="canonical" href="http://kungbi.github.io/2020/01/02/web/server-side-rendering-vs-client-side-rendering/"/>
+    <meta charset="utf-8">
+<link rel="canonical" href="http://kungbi.github.io/2020/01/02/web/server-side-rendering-vs-client-side-rendering/">
 
-<meta name="generator" content="Hexo 4.2.0" />
+<meta name="generator" content="Hexo 4.2.0">
 
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 <title>[Web] Server side rendering VS Client side rendering - Kungbi&#39;s IT Blog</title>
 
@@ -94,27 +94,22 @@
             
             <div class="navbar-start">
                 
-                <a class="navbar-item"
-                href="/">Home</a>
+                <a class="navbar-item" href="/">Home</a>
                 
-                <a class="navbar-item"
-                href="/archives">Archives</a>
+                <a class="navbar-item" href="/archives">Archives</a>
                 
-                <a class="navbar-item"
-                href="/categories">Categories</a>
+                <a class="navbar-item" href="/categories">Categories</a>
                 
-                <a class="navbar-item"
-                href="/tags">Tags</a>
+                <a class="navbar-item" href="/tags">Tags</a>
                 
-                <a class="navbar-item"
-                href="/about">About</a>
+                <a class="navbar-item" href="/about">About</a>
                 
             </div>
             
             <div class="navbar-end">
                 
                     
-                    <a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/kungbi">
+                    <a class="navbar-item" target="_blank" rel="external nofollow noopener noreferrer" title="Download on GitHub" href="https://github.com/kungbi">
                         
                         <i class="fab fa-github"></i>
                         
@@ -143,7 +138,7 @@
 <div class="card">
     
     <div class="card-image">
-        <span  class="image is-7by1">
+        <span class="image is-7by1">
             <img class="thumbnail" src="/gallery/71723554-642b5e00-2e70-11ea-888b-c0487dfc824f.png" alt="[Web] Server side rendering VS Client side rendering">
         </span>
     </div>
@@ -178,21 +173,21 @@
             <p>Server side MVC와 Client side MVC의 차이는 무엇일까? 최근 react를 공부하게 되면서 이 둘의 차이를 공부해보았다. MVC에 대한 포스팅을 <a href="http://kungbi.github.io/devlog/2020/01/01/MVC란/">MVC</a> 다음 포스팅을 확인해보자.</p>
 <a id="more"></a>
 
-<img src="https://user-images.githubusercontent.com/16620948/71723554-642b5e00-2e70-11ea-888b-c0487dfc824f.png" alt="image" style="zoom:40%;" />
+<img src="https://user-images.githubusercontent.com/16620948/71723554-642b5e00-2e70-11ea-888b-c0487dfc824f.png" alt="image" style="zoom:40%;">
 
-<h2 id="Server-side-MVC-와-Client-side-MVC"><a href="#Server-side-MVC-와-Client-side-MVC" class="headerlink" title="Server side MVC 와 Client side MVC?"></a>Server side MVC 와 Client side MVC?</h2><image src="/gallery/1_5gCHJbU0qoYSKa-hvyyfVA.png"/>
+<h2 id="Server-side-MVC-와-Client-side-MVC"><a href="#Server-side-MVC-와-Client-side-MVC" class="headerlink" title="Server side MVC 와 Client side MVC?"></a>Server side MVC 와 Client side MVC?</h2><image src="/gallery/1_5gCHJbU0qoYSKa-hvyyfVA.png">
 
 <p>스마트폰의 사용자들이 많아지면서 스마트폰에 최적화된 웹 페이지가 중요해지기 시작했다. 스마트폰은 데스크탑에 비해 낮은 성능 때문에 이전의 방식으로 유지하기엔 어려움이 많았다. 따라서 다른 방법이 탄생했다. 바로 SPA(<strong>S</strong>ingle <strong>P</strong>age <strong>A</strong>pplication)이다.</p>
 <p>SPA는 최초에 한번 페이지 전체를 로딩한 이후, 필요한 부분만 데이터 요청을 하여 그 부분만 JS를 통해 렌더링 하는 방식이다. 이전의 방식(SSR)은 새로운 데이터가 필요할 때마다 페이지 전체를 렌더링 할 필요가 있었다.</p>
 <p>그러나 SPA는 필요한 부분만 렌더링 하는 방식으로 트래픽을 감소시키고, 속도는 빨라졌다. 서버는 JSON으로 데이터만 전송하고 클라이언트에선 JS로 받은 데이터를 통해 html을 그리는 방식이다. SPA Framework에는 <strong>Angular JS</strong>, <strong>Backbone</strong>, <strong>React</strong> 등이 있다.</p>
-<image src="/gallery/1_paPkmhDhXifPg-64om52og.jpeg"/>
+<image src="/gallery/1_paPkmhDhXifPg-64om52og.jpeg">
 
 <h3 id="각-렌더링의-장단점"><a href="#각-렌더링의-장단점" class="headerlink" title="각 렌더링의 장단점"></a>각 렌더링의 장단점</h3><p>CSR은 필요한 부분만 요청하여 데이터만 받아 특정 부분만 다시 그리면 되기 때문에 속도가 더 빨라진다. 그러나 단점도 존재한다. 초기 페이지를 읽는 시간, 자바스크립트를 읽는 시간, 자바스크립트가 화면을 그리는 시간이 소요되기 때문이다. <em>초기 페이지 로딩</em> 시간이 길어질 수도 있다는 것이다.</p>
 <p>그리고 검색엔진이 페이지를 읽지 못할 수 있다. 그 이유는 자바스크립트를 먼저 부른 뒤에 화면을 그린다. 그러나 검색엔진은 자바스크립트 파일을 실행시키지 못한다.  </p>
 <p>서버 사이드 렌더링은 클라이언트 사이드 렌더링의 반대이다. 초기 로딩 시간이 빠른 대신, 새로운 데이터를 불러올때마다 전체 페이지를 렌더링 해야하는 등의 단점이 있다.</p>
 <p>결론적으로 어느 것을 사용해도 장단점은 있으며, 개발하고자 하는 도메인에 따라서 결정하도록 하자.</p>
 
-        </div>
+        </image></image></div>
         
         <div class="level is-size-7 is-uppercase">
             <div class="level-start">
@@ -207,7 +202,7 @@
         
         
 <div class="sharethis-inline-share-buttons"></div>
-<script type='text/javascript' src='//platform-api.sharethis.com/js/sharethis.js#property=5e1094a2f1a1cf0012565702&amp;product=inline-share-buttons&amp;cms=sop' async='async'></script>
+<script type="text/javascript" src="//platform-api.sharethis.com/js/sharethis.js#property=5e1094a2f1a1cf0012565702&amp;product=inline-share-buttons&amp;cms=sop" async="async"></script>
 
         
     </div>
@@ -252,7 +247,7 @@ s.setAttribute('data-timestamp', +new Date());
 (d.head || d.body).appendChild(s);
 })();
 </script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="external nofollow noopener noreferrer" target="_blank">comments powered by Disqus.</a></noscript>
 
     </div>
 </div>
@@ -376,8 +371,7 @@ s.setAttribute('data-timestamp', +new Date());
                 </a>
                 <p class="is-size-7">
                 &copy; 2020 Woongbi Shin&nbsp;
-                Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> & <a
-                        href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a>
+                Powered by <a href="https://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a> & <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="external nofollow noopener noreferrer">Icarus</a>
                 
                 </p>
             </div>
@@ -386,7 +380,7 @@ s.setAttribute('data-timestamp', +new Date());
                 <div class="field has-addons is-flex-center-mobile has-mt-5-mobile is-flex-wrap is-flex-middle">
                 
                 <p class="control">
-                    <a class="button is-white is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/">
+                    <a class="button is-white is-large" target="_blank" rel="external nofollow noopener noreferrer" title="Creative Commons" href="https://creativecommons.org/">
                         
                         <i class="fab fa-creative-commons"></i>
                         
@@ -394,7 +388,7 @@ s.setAttribute('data-timestamp', +new Date());
                 </p>
                 
                 <p class="control">
-                    <a class="button is-white is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/">
+                    <a class="button is-white is-large" target="_blank" rel="external nofollow noopener noreferrer" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/">
                         
                         <i class="fab fa-creative-commons-by"></i>
                         
@@ -402,7 +396,7 @@ s.setAttribute('data-timestamp', +new Date());
                 </p>
                 
                 <p class="control">
-                    <a class="button is-white is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/kungbi">
+                    <a class="button is-white is-large" target="_blank" rel="external nofollow noopener noreferrer" title="Download on GitHub" href="https://github.com/kungbi">
                         
                         <i class="fab fa-github"></i>
                         
@@ -454,7 +448,7 @@ var IcarusThemeSettings = {
 
 <div id="outdated">
     <h6>Your browser is out-of-date!</h6>
-    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/" rel="external nofollow noopener noreferrer" target="_blank">Update
             my browser now </a></p>
     <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
 </div>
@@ -494,7 +488,7 @@ document.addEventListener('DOMContentLoaded', function () {
 </script>
 
 
-<a id="back-to-top" title="Zurück nach oben" href="javascript:;">
+<a id="back-to-top" title="Back to Top" href="javascript:;">
     <i class="fas fa-chevron-up"></i>
 </a>
 <script src="/js/back-to-top.js" defer></script>
@@ -518,7 +512,7 @@ document.addEventListener('DOMContentLoaded', function () {
     <div class="searchbox ins-search">
     <div class="searchbox-container ins-search-container">
         <div class="searchbox-input-wrapper">
-            <input type="text" class="searchbox-input ins-search-input" placeholder="입력 하세요..." />
+            <input type="text" class="searchbox-input ins-search-input" placeholder="입력 하세요...">
             <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
         </div>
         <div class="searchbox-result-wrapper ins-section-wrapper">

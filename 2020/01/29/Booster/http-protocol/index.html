@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html  lang="ko">
+<html lang="ko">
 <head>
-    <meta charset="utf-8" />
-<link rel="canonical" href="http://kungbi.github.io/2020/01/29/booster/http-protocol/"/>
+    <meta charset="utf-8">
+<link rel="canonical" href="http://kungbi.github.io/2020/01/29/booster/http-protocol/">
 
-<meta name="generator" content="Hexo 4.2.0" />
+<meta name="generator" content="Hexo 4.2.0">
 
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 <title>[부스트코스] HTTP 프로토콜이란? - Kungbi&#39;s IT Blog</title>
 
@@ -96,27 +96,22 @@
             
             <div class="navbar-start">
                 
-                <a class="navbar-item"
-                href="/">Home</a>
+                <a class="navbar-item" href="/">Home</a>
                 
-                <a class="navbar-item"
-                href="/archives">Archives</a>
+                <a class="navbar-item" href="/archives">Archives</a>
                 
-                <a class="navbar-item"
-                href="/categories">Categories</a>
+                <a class="navbar-item" href="/categories">Categories</a>
                 
-                <a class="navbar-item"
-                href="/tags">Tags</a>
+                <a class="navbar-item" href="/tags">Tags</a>
                 
-                <a class="navbar-item"
-                href="/about">About</a>
+                <a class="navbar-item" href="/about">About</a>
                 
             </div>
             
             <div class="navbar-end">
                 
                     
-                    <a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/kungbi">
+                    <a class="navbar-item" target="_blank" rel="external nofollow noopener noreferrer" title="Download on GitHub" href="https://github.com/kungbi">
                         
                         <i class="fab fa-github"></i>
                         
@@ -145,7 +140,7 @@
 <div class="card">
     
     <div class="card-image">
-        <span  class="image is-7by1">
+        <span class="image is-7by1">
             <img class="thumbnail" src="/gallery/http.png" alt="[부스트코스] HTTP 프로토콜이란?">
         </span>
     </div>
@@ -180,19 +175,19 @@
             <p>웹 브라우저와 웹 서버 간에 서로 통신하기 위해서는 일종의 규약이 필요하다. 이때 필요한 규약이 HTTP이다. 이번 포스팅에선 HTTP에 대하여 글을 써보려고 한다.</p>
 <a id="more"></a>
 
-<p><span style='color:gray;font-size:0.9rem'>해당 포스팅은 <a href="http://www.edwith.org/boostcourse-web">커넥트재단의 edwith boostcourse - Web Programming</a>의 강의 자료를 바탕으로 작성되었습니다.</span></p>
+<p><span style="color:gray;font-size:0.9rem">해당 포스팅은 <a href="http://www.edwith.org/boostcourse-web" rel="external nofollow noopener noreferrer" target="_blank">커넥트재단의 edwith boostcourse - Web Programming</a>의 강의 자료를 바탕으로 작성되었습니다.</span></p>
 <hr>
 <h2 id="HTTP-Hypertext-Transfer-Protocol-이란"><a href="#HTTP-Hypertext-Transfer-Protocol-이란" class="headerlink" title="HTTP(Hypertext Transfer Protocol) 이란?"></a>HTTP(Hypertext Transfer Protocol) 이란?</h2><p><strong>HTTP</strong>는 인터넷에서 데이터를 주고받기 위한 프로토콜이다. 프로토콜을 쉽게 말해서 규칙이라 보면 된다. 로컬에서만 동작하는(인터넷을 사용하지 않는) 소프트웨어가 아닌, 서버와 상호작용하는 소프트웨어를 개발한다면 <strong>HTTP Protocol</strong>에 대해서 기본적인 개념을 알아야 한다.</p>
-<p align='center'><img src='/gallery/193BE9374FED5A322362D9.jpeg' width='50%'/></p>
+<p align="center"><img src="/gallery/193BE9374FED5A322362D9.jpeg" width="50%"></p>
 HTTP는 1989년 **팀 버너스리(Tim Berners-Lee)** 에 의해 처음 설계되어 인터넷을 통한 **World Wide Web(WWW)**을 기반으로 전 세계적인 정보공유를 이루는데 큰 역할을 했다.
 
 <p>HTTP 말 그대로 hyper 초월의 뜻으로 hypertext는 <strong>그저 텍스트가 아닌 그 이상을 뛰어넘어 이미지, 동영상, 오디오 등을 표현</strong>할 수 있다는 의미로 해석하면 된다.</p>
 <p> <strong>HTTP</strong>는 웹에서만 사용하는 프로토콜로 <strong>TCP/IP</strong> 기반으로 한 지점에서 다른 지점으로 <strong>요청</strong>과 <strong>응답</strong>을 전송한다.</p>
 <hr>
-<h2 id="HTTP-작동-방식"><a href="#HTTP-작동-방식" class="headerlink" title="HTTP 작동 방식"></a>HTTP 작동 방식</h2><p align='center'><img src='/gallery/request-response.png'/></p>
+<h2 id="HTTP-작동-방식"><a href="#HTTP-작동-방식" class="headerlink" title="HTTP 작동 방식"></a>HTTP 작동 방식</h2><p align="center"><img src="/gallery/request-response.png"></p>
 HTTP는 기본적으로 **Request(요청)**과 **Response(응답)** 으로 나뉜다. **클라이언트(브라우저)**가 서버에 접속하면 Request를 하게 되고 **서버**에선 Request에 따라서 맞는 Response를 하게 된다. 
 
-<p>만약 <a href="http://naver.com">http://naver.com</a> 에 접속하게 된다면, 네이버 서버는 <strong>네이버 홈페이지</strong>를 응답하게 되고 <a href="https://news.naver.com">https://news.naver.com</a> 에 접속하면 네이버는 <strong>네이버 뉴스 페이지</strong>를 응답하게 된다. </p>
+<p>만약 <a href="http://naver.com" rel="external nofollow noopener noreferrer" target="_blank">http://naver.com</a> 에 접속하게 된다면, 네이버 서버는 <strong>네이버 홈페이지</strong>를 응답하게 되고 <a href="https://news.naver.com" rel="external nofollow noopener noreferrer" target="_blank">https://news.naver.com</a> 에 접속하면 네이버는 <strong>네이버 뉴스 페이지</strong>를 응답하게 된다. </p>
 <h4 id="HTTP-특징"><a href="#HTTP-특징" class="headerlink" title="HTTP 특징"></a>HTTP 특징</h4><ul>
 <li>HTTP는 연결 상태를 유지하지 않는 <strong>비연결성 프로토콜</strong>이다.<br>따라서 서버 간의 최대 연결 수보다 훨씬 많은 요청과 응답을 처리할 수 있다.<br>그러나 연결을 끊어버리기 때문에, 클라이언트의 이전 상황을 알 수가 없다. 이러한 단점을 해결하기 위해 <strong>Cookie</strong>와 <strong>Seesion</strong> 등장하게 된다.</li>
 <li>HTTP는 연결을 유지하지 않는 프로토콜이기 떄문에 <strong>요청/응답(request/response)</strong> 방식으로 동작한다.</li>
@@ -206,7 +201,7 @@ HTTP는 기본적으로 **Request(요청)**과 **Response(응답)** 으로 나�
 <li>URL에 접속하기 위해선 해당 URL에 맞는 프로토콜을 알아야 하고, 그와 동일한 프로토콜로 접속해야 한다.</li>
 </ul>
 <hr>
-<h2 id="HTTP-Header"><a href="#HTTP-Header" class="headerlink" title="HTTP Header"></a>HTTP Header</h2><p align='center'><img src='/gallery/request_header.png' width='70%'/></p>
+<h2 id="HTTP-Header"><a href="#HTTP-Header" class="headerlink" title="HTTP Header"></a>HTTP Header</h2><p align="center"><img src="/gallery/request_header.png" width="70%"></p>
 **HTTP Header**은 웹브라우저가 HTTP프로토콜을 이용해 요청 정보를 웹 서버로 전송할 때 HTTP 요청 헤더에 **부가적인 정보**를 담아 전송한다. 대표적인 몇가지를 소개하려고 한다.
 
 <h4 id="요청-URL"><a href="#요청-URL" class="headerlink" title="요청 URL"></a>요청 URL</h4><ul>
@@ -223,7 +218,7 @@ HTTP는 기본적으로 **Request(요청)**과 **Response(응답)** 으로 나�
 <li>HTTP의 비연결성의 단점을 해결하기 위해 사용자의 상태 정보를 저장하는 것을 쿠키라 한다. 요청을 할시에 쿠키를 같이 전송하여 인증을  시행한다. ex) 자동 로그인, 로그인 상태 유지</li>
 </ul>
 <hr>
-<h2 id="HTTPS"><a href="#HTTPS" class="headerlink" title="HTTPS?"></a>HTTPS?</h2><p align='center'><img src='/gallery/download.png' width='50%'/></p>
+<h2 id="HTTPS"><a href="#HTTPS" class="headerlink" title="HTTPS?"></a>HTTPS?</h2><p align="center"><img src="/gallery/download.png" width="50%"></p>
 **HTTPS**는 **HTTP**와 같은 통신 프로토콜이다. 사용방식 또한 HTTP와 거의 비슷하다.
 
 <p>HTTP와 HTTPS와의 차이점은 <strong>HTTP의 취약점을 보완</strong>한 것에 있다. HTTP는 서버와 주고받는 패킷이 암호화 처리가 되어 있지 않아 만약 중간에 패킷을 가로챈다면 보안상 치명적인 결과를 가져올 수 있다.</p>
@@ -231,7 +226,7 @@ HTTP는 기본적으로 **Request(요청)**과 **Response(응답)** 으로 나�
 <blockquote>
 <p> 만약 1024 비트(보통은 128비트 암호화)의 암호화라면, 평균적으로 2의 512승을 대입해야하며, 이것은2475880078570760000000000000.00이라는 수를 대입해야 한다는 뜻과 같다고 한다.</p>
 </blockquote>
-<p align='center'><img src='/gallery/hufs_booster.jpg'/></p>
+<p align="center"><img src="/gallery/hufs_booster.jpg"></p>
         </div>
         
         <div class="level is-size-7 is-uppercase">
@@ -247,7 +242,7 @@ HTTP는 기본적으로 **Request(요청)**과 **Response(응답)** 으로 나�
         
         
 <div class="sharethis-inline-share-buttons"></div>
-<script type='text/javascript' src='//platform-api.sharethis.com/js/sharethis.js#property=5e1094a2f1a1cf0012565702&amp;product=inline-share-buttons&amp;cms=sop' async='async'></script>
+<script type="text/javascript" src="//platform-api.sharethis.com/js/sharethis.js#property=5e1094a2f1a1cf0012565702&amp;product=inline-share-buttons&amp;cms=sop" async="async"></script>
 
         
     </div>
@@ -292,7 +287,7 @@ s.setAttribute('data-timestamp', +new Date());
 (d.head || d.body).appendChild(s);
 })();
 </script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="external nofollow noopener noreferrer" target="_blank">comments powered by Disqus.</a></noscript>
 
     </div>
 </div>
@@ -444,8 +439,7 @@ s.setAttribute('data-timestamp', +new Date());
                 </a>
                 <p class="is-size-7">
                 &copy; 2020 Woongbi Shin&nbsp;
-                Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> & <a
-                        href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a>
+                Powered by <a href="https://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a> & <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="external nofollow noopener noreferrer">Icarus</a>
                 
                 </p>
             </div>
@@ -454,7 +448,7 @@ s.setAttribute('data-timestamp', +new Date());
                 <div class="field has-addons is-flex-center-mobile has-mt-5-mobile is-flex-wrap is-flex-middle">
                 
                 <p class="control">
-                    <a class="button is-white is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/">
+                    <a class="button is-white is-large" target="_blank" rel="external nofollow noopener noreferrer" title="Creative Commons" href="https://creativecommons.org/">
                         
                         <i class="fab fa-creative-commons"></i>
                         
@@ -462,7 +456,7 @@ s.setAttribute('data-timestamp', +new Date());
                 </p>
                 
                 <p class="control">
-                    <a class="button is-white is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/">
+                    <a class="button is-white is-large" target="_blank" rel="external nofollow noopener noreferrer" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/">
                         
                         <i class="fab fa-creative-commons-by"></i>
                         
@@ -470,7 +464,7 @@ s.setAttribute('data-timestamp', +new Date());
                 </p>
                 
                 <p class="control">
-                    <a class="button is-white is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/kungbi">
+                    <a class="button is-white is-large" target="_blank" rel="external nofollow noopener noreferrer" title="Download on GitHub" href="https://github.com/kungbi">
                         
                         <i class="fab fa-github"></i>
                         
@@ -522,7 +516,7 @@ var IcarusThemeSettings = {
 
 <div id="outdated">
     <h6>Your browser is out-of-date!</h6>
-    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/" rel="external nofollow noopener noreferrer" target="_blank">Update
             my browser now </a></p>
     <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
 </div>
@@ -562,7 +556,7 @@ document.addEventListener('DOMContentLoaded', function () {
 </script>
 
 
-<a id="back-to-top" title="Zurück nach oben" href="javascript:;">
+<a id="back-to-top" title="Back to Top" href="javascript:;">
     <i class="fas fa-chevron-up"></i>
 </a>
 <script src="/js/back-to-top.js" defer></script>
@@ -586,7 +580,7 @@ document.addEventListener('DOMContentLoaded', function () {
     <div class="searchbox ins-search">
     <div class="searchbox-container ins-search-container">
         <div class="searchbox-input-wrapper">
-            <input type="text" class="searchbox-input ins-search-input" placeholder="입력 하세요..." />
+            <input type="text" class="searchbox-input ins-search-input" placeholder="입력 하세요...">
             <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
         </div>
         <div class="searchbox-result-wrapper ins-section-wrapper">
