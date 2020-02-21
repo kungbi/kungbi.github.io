@@ -3,6 +3,27 @@
 
 
     <url>
+        <loc>http://kungbi.github.io/tags/jsp/</loc>
+        <lastmod>2020-02-21T21:56:50.443Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://kungbi.github.io/tags/servlet/</loc>
+        <lastmod>2020-02-21T21:56:50.443Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://kungbi.github.io/tags/%25EB%25B6%2580%25EC%258A%25A4%25ED%258A%25B8%25EC%25BD%2594%25EC%258A%25A4/</loc>
+        <lastmod>2020-02-21T21:56:50.443Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>http://kungbi.github.io/tags/was/</loc>
         <lastmod>2020-02-12T21:17:21.525Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -18,13 +39,6 @@
 
     <url>
         <loc>http://kungbi.github.io/tags/web/</loc>
-        <lastmod>2020-02-12T21:17:21.525Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://kungbi.github.io/tags/%25EB%25B6%2580%25EC%258A%25A4%25ED%258A%25B8%25EC%25BD%2594%25EC%258A%25A4/</loc>
         <lastmod>2020-02-12T21:17:21.525Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>

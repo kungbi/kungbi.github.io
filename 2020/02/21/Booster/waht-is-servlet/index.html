@@ -2,33 +2,31 @@
 <html lang="ko">
 <head>
     <meta charset="utf-8">
-<link rel="canonical" href="http://kungbi.github.io/2020/01/29/booster/http-protocol/">
+<link rel="canonical" href="http://kungbi.github.io/2020/02/21/booster/waht-is-servlet/">
 
 <meta name="generator" content="Hexo 4.2.0">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-<title>[부스트코스] HTTP 프로토콜이란? - Kungbi&#39;s IT Blog</title>
+<title>[부스트코스] Servlet. - Kungbi&#39;s IT Blog</title>
 
 
-    <meta name="description" content="웹 브라우저와 웹 서버 간에 서로 통신하기 위해서는 일종의 규약이 필요하다. 이때 필요한 규약이 HTTP이다. 이번 포스팅에선 HTTP에 대하여 글을 써보려고 한다.">
+    <meta name="description" content="이번 포스팅은 자바 웹 어플리케이션의 구조와 Servlet이 무엇인지에 대해서 포스팅 하려고 한다.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="[부스트코스] HTTP 프로토콜이란?">
-<meta property="og:url" content="http://kungbi.github.io/2020/01/29/Booster/http-protocol/index.html">
+<meta property="og:title" content="[부스트코스] Servlet.">
+<meta property="og:url" content="http://kungbi.github.io/2020/02/21/Booster/waht-is-servlet/index.html">
 <meta property="og:site_name" content="Kungbi&#39;s IT Blog">
-<meta property="og:description" content="웹 브라우저와 웹 서버 간에 서로 통신하기 위해서는 일종의 규약이 필요하다. 이때 필요한 규약이 HTTP이다. 이번 포스팅에선 HTTP에 대하여 글을 써보려고 한다.">
+<meta property="og:description" content="이번 포스팅은 자바 웹 어플리케이션의 구조와 Servlet이 무엇인지에 대해서 포스팅 하려고 한다.">
 <meta property="og:locale" content="ko_KR">
-<meta property="og:image" content="http://kungbi.github.io/gallery/http.png">
-<meta property="article:published_time" content="2020-01-28T16:23:19.000Z">
-<meta property="article:modified_time" content="2020-02-12T17:20:00.103Z">
+<meta property="og:image" content="http://kungbi.github.io/gallery/what-is-java-servlet-by-studywow.jpeg">
+<meta property="article:published_time" content="2020-02-20T21:22:27.000Z">
+<meta property="article:modified_time" content="2020-02-21T21:56:50.443Z">
 <meta property="article:author" content="Woongbi Shin">
 <meta property="article:tag" content="부스트코스">
-<meta property="article:tag" content="web">
-<meta property="article:tag" content="booster">
-<meta property="article:tag" content="protocol">
-<meta property="article:tag" content="http">
+<meta property="article:tag" content="servlet">
+<meta property="article:tag" content="jsp">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://kungbi.github.io/gallery/http.png">
+<meta name="twitter:image" content="http://kungbi.github.io/gallery/what-is-java-servlet-by-studywow.jpeg">
 
 
 
@@ -88,7 +86,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.png" alt="[부스트코스] HTTP 프로토콜이란?" height="28">
+                <img src="/images/logo.png" alt="[부스트코스] Servlet." height="28">
             
             </a>
         </div>
@@ -141,7 +139,7 @@
     
     <div class="card-image">
         <span class="image is-7by1">
-            <img class="thumbnail" src="/gallery/http.png" alt="[부스트코스] HTTP 프로토콜이란?">
+            <img class="thumbnail" src="/gallery/what-is-java-servlet-by-studywow.jpeg" alt="[부스트코스] Servlet.">
         </span>
     </div>
     
@@ -149,7 +147,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2020-01-28T16:23:19.000Z">2020-01-29</time>
+                <time class="level-item has-text-grey" datetime="2020-02-20T21:22:27.000Z">2020-02-21</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/Devlog/">Devlog</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Devlog/Boost-Course/">Boost Course</a>
@@ -159,7 +157,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    8분 읽기 (대략 1204 단어)
+                    3분 읽기 (대략 419 단어)
                 </span>
                 
                 
@@ -168,72 +166,43 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                [부스트코스] HTTP 프로토콜이란?
+                [부스트코스] Servlet.
             
         </h1>
         <div class="content">
-            <p>웹 브라우저와 웹 서버 간에 서로 통신하기 위해서는 일종의 규약이 필요하다. 이때 필요한 규약이 HTTP이다. 이번 포스팅에선 HTTP에 대하여 글을 써보려고 한다.</p>
+            <p>이번 포스팅은 자바 웹 어플리케이션의 구조와 Servlet이 무엇인지에 대해서 포스팅 하려고 한다.</p>
 <a id="more"></a>
 
 <p><span style="color:gray;font-size:0.9rem">해당 포스팅은 <a href="http://www.edwith.org/boostcourse-web" rel="external nofollow noopener noreferrer" target="_blank">커넥트재단의 edwith boostcourse - Web Programming</a>의 강의 자료를 바탕으로 작성되었습니다.</span></p>
-<hr>
-<h2 id="HTTP-Hypertext-Transfer-Protocol-이란"><a href="#HTTP-Hypertext-Transfer-Protocol-이란" class="headerlink" title="HTTP(Hypertext Transfer Protocol) 이란?"></a>HTTP(Hypertext Transfer Protocol) 이란?</h2><p><strong>HTTP</strong>는 인터넷에서 데이터를 주고받기 위한 프로토콜이다. 프로토콜을 쉽게 말해서 규칙이라 보면 된다. 로컬에서만 동작하는(인터넷을 사용하지 않는) 소프트웨어가 아닌, 서버와 상호작용하는 소프트웨어를 개발한다면 <strong>HTTP Protocol</strong>에 대해서 기본적인 개념을 알아야 한다.</p>
-<p align="center"><img src="/gallery/193BE9374FED5A322362D9.jpeg" width="50%"></p>
-HTTP는 1989년 **팀 버너스리(Tim Berners-Lee)** 에 의해 처음 설계되어 인터넷을 통한 **World Wide Web(WWW)**을 기반으로 전 세계적인 정보공유를 이루는데 큰 역할을 했다.
+<h2 id="자바-웹-어플리케이션-구조"><a href="#자바-웹-어플리케이션-구조" class="headerlink" title="자바 웹 어플리케이션 구조"></a>자바 웹 어플리케이션 구조</h2><img src="/gallery/1_5_1_____.png">
 
-<p>HTTP 말 그대로 hyper 초월의 뜻으로 hypertext는 <strong>그저 텍스트가 아닌 그 이상을 뛰어넘어 이미지, 동영상, 오디오 등을 표현</strong>할 수 있다는 의미로 해석하면 된다.</p>
-<p> <strong>HTTP</strong>는 웹에서만 사용하는 프로토콜로 <strong>TCP/IP</strong> 기반으로 한 지점에서 다른 지점으로 <strong>요청</strong>과 <strong>응답</strong>을 전송한다.</p>
-<hr>
-<h2 id="HTTP-작동-방식"><a href="#HTTP-작동-방식" class="headerlink" title="HTTP 작동 방식"></a>HTTP 작동 방식</h2><p align="center"><img src="/gallery/request-response.png"></p>
-HTTP는 기본적으로 **Request(요청)**과 **Response(응답)** 으로 나뉜다. **클라이언트(브라우저)**가 서버에 접속하면 Request를 하게 되고 **서버**에선 Request에 따라서 맞는 Response를 하게 된다. 
-
-<p>만약 <a href="http://naver.com" rel="external nofollow noopener noreferrer" target="_blank">http://naver.com</a> 에 접속하게 된다면, 네이버 서버는 <strong>네이버 홈페이지</strong>를 응답하게 되고 <a href="https://news.naver.com" rel="external nofollow noopener noreferrer" target="_blank">https://news.naver.com</a> 에 접속하면 네이버는 <strong>네이버 뉴스 페이지</strong>를 응답하게 된다. </p>
-<h4 id="HTTP-특징"><a href="#HTTP-특징" class="headerlink" title="HTTP 특징"></a>HTTP 특징</h4><ul>
-<li>HTTP는 연결 상태를 유지하지 않는 <strong>비연결성 프로토콜</strong>이다.<br>따라서 서버 간의 최대 연결 수보다 훨씬 많은 요청과 응답을 처리할 수 있다.<br>그러나 연결을 끊어버리기 때문에, 클라이언트의 이전 상황을 알 수가 없다. 이러한 단점을 해결하기 위해 <strong>Cookie</strong>와 <strong>Seesion</strong> 등장하게 된다.</li>
-<li>HTTP는 연결을 유지하지 않는 프로토콜이기 떄문에 <strong>요청/응답(request/response)</strong> 방식으로 동작한다.</li>
+<h3 id="web-xml-파일"><a href="#web-xml-파일" class="headerlink" title="web.xml 파일"></a>web.xml 파일</h3><ul>
+<li>배포 기술자라고도 불린다.</li>
+<li>웹 애플리케이션에 대한 정보들을 가지고있는 파일.</li>
+<li>servlet 3.0 미만에서는 필수로 가지고 있어야 함.<br>servlet 3.0 이상에서는 어노테이션을 사용해서 대신해주는 부분들이 존재하기 떄문에 반드시 꼭 포함하지는 않아도 된다.</li>
+</ul>
+<h3 id="lib-폴더"><a href="#lib-폴더" class="headerlink" title="lib 폴더"></a>lib 폴더</h3><p>각종 자료 파일들 저장</p>
+<h3 id="classes-폴더"><a href="#classes-폴더" class="headerlink" title="classes 폴더"></a>classes 폴더</h3><p>java 패키지, class들, servlet 파일이 저장된다. </p>
+<h3 id="WEB-INF-폴더-이외의-폴더들"><a href="#WEB-INF-폴더-이외의-폴더들" class="headerlink" title="WEB-INF 폴더 이외의 폴더들"></a>WEB-INF 폴더 이외의 폴더들</h3><ul>
+<li>각종 폴더들을 생성할 수 있다.</li>
+<li>프론트엔트 리소스(HTML, CSS, JavaScript 등) 저장.</li>
+<li>그 외에도 이미지 폴더, 다양한 리소스들을 저장 가능.</li>
 </ul>
 <hr>
-<h2 id="URL-Uniform-Resorce-Locator"><a href="#URL-Uniform-Resorce-Locator" class="headerlink" title="URL(Uniform Resorce Locator)"></a>URL(Uniform Resorce Locator)</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://kungbi.github.io</span><br></pre></td></tr></table></figure>
-
+<h2 id="Servlet-이란"><a href="#Servlet-이란" class="headerlink" title="Servlet 이란?"></a>Servlet 이란?</h2><p>자바 웹 어플리케이션 구성요소 중 <strong>동적인 처리</strong>를 하는 프로그램의 역할을 한다.</p>
 <ul>
-<li><strong>URL</strong>은 인터넷 상의 <strong>자원(컴퓨터)</strong>가 어디에 있는지를 알려주기 위한 규약이다. </li>
-<li>집 주소(도로명 주소)와 똑같은 개념이다. </li>
-<li>URL에 접속하기 위해선 해당 URL에 맞는 프로토콜을 알아야 하고, 그와 동일한 프로토콜로 접속해야 한다.</li>
+<li>서블릿은 WAS에서 동작하는 Java 클래스이다.</li>
+<li>서블릿은 HttpServlet 클래스를 상속받아야 한다.</li>
+<li>서블릿과 JSP로부터 최상의 결과를 얻으려면 웹 페이지를 개발할 때 이두가지(JSP, Servlet)를 조화롭게 사용해야한다.<br><span style="color: gray; font-size: 0.8rem">예) 웹 페이지를 구성하는 화면은 JSP로 표현하고 복잡한 프로그래밍은 서블릿으로 구현</span></li>
 </ul>
-<hr>
-<h2 id="HTTP-Header"><a href="#HTTP-Header" class="headerlink" title="HTTP Header"></a>HTTP Header</h2><p align="center"><img src="/gallery/request_header.png" width="70%"></p>
-**HTTP Header**은 웹브라우저가 HTTP프로토콜을 이용해 요청 정보를 웹 서버로 전송할 때 HTTP 요청 헤더에 **부가적인 정보**를 담아 전송한다. 대표적인 몇가지를 소개하려고 한다.
 
-<h4 id="요청-URL"><a href="#요청-URL" class="headerlink" title="요청 URL"></a>요청 URL</h4><ul>
-<li>요청을 하는 자원의 URL 의미한다.</li>
-</ul>
-<h4 id="요청-메서드"><a href="#요청-메서드" class="headerlink" title="요청 메서드"></a>요청 메서드</h4><ul>
-<li><strong>GET</strong> : 정보를 요청하기 위해 사용.</li>
-<li><strong>POST</strong>: 정보를 입력하기 위해 사용.</li>
-<li><strong>PUT</strong> : 정보를 수정하기 위해 사용.</li>
-<li><strong>DELETE</strong> : 정보를 삭제하기 위해 사용.</li>
-<li>…</li>
-</ul>
-<h4 id="쿠키"><a href="#쿠키" class="headerlink" title="쿠키"></a>쿠키</h4><ul>
-<li>HTTP의 비연결성의 단점을 해결하기 위해 사용자의 상태 정보를 저장하는 것을 쿠키라 한다. 요청을 할시에 쿠키를 같이 전송하여 인증을  시행한다. ex) 자동 로그인, 로그인 상태 유지</li>
-</ul>
-<hr>
-<h2 id="HTTPS"><a href="#HTTPS" class="headerlink" title="HTTPS?"></a>HTTPS?</h2><p align="center"><img src="/gallery/download.png" width="50%"></p>
-**HTTPS**는 **HTTP**와 같은 통신 프로토콜이다. 사용방식 또한 HTTP와 거의 비슷하다.
-
-<p>HTTP와 HTTPS와의 차이점은 <strong>HTTP의 취약점을 보완</strong>한 것에 있다. HTTP는 서버와 주고받는 패킷이 암호화 처리가 되어 있지 않아 만약 중간에 패킷을 가로챈다면 보안상 치명적인 결과를 가져올 수 있다.</p>
-<p>그래서 HTTPS는 HTTP의 취약점을 보완하기 위해 주고받는 모든 메시지를 암호화한다. 즉, 중간에 패킷을 가로챈다고 해도 암호화된 내용이 노출되기 떄문에 보안상 안전하고, 공유된 대칭키를 모르는 상황에서 암호화를 푼다는 것은 모든 경우의 키를 대입해야한다는 것이다.</p>
-<blockquote>
-<p> 만약 1024 비트(보통은 128비트 암호화)의 암호화라면, 평균적으로 2의 512승을 대입해야하며, 이것은2475880078570760000000000000.00이라는 수를 대입해야 한다는 뜻과 같다고 한다.</p>
-</blockquote>
-<p align="center"><img src="/gallery/hufs_booster.jpg"></p>
         </div>
         
         <div class="level is-size-7 is-uppercase">
             <div class="level-start">
                 <div class="level-item">
                     <span class="is-size-6 has-text-grey has-mr-7">#</span>
-                    <a class="has-link-grey -link" href="/tags/booster/" rel="tag">booster</a>, <a class="has-link-grey -link" href="/tags/http/" rel="tag">http</a>, <a class="has-link-grey -link" href="/tags/protocol/" rel="tag">protocol</a>, <a class="has-link-grey -link" href="/tags/web/" rel="tag">web</a>, <a class="has-link-grey -link" href="/tags/%EB%B6%80%EC%8A%A4%ED%8A%B8%EC%BD%94%EC%8A%A4/" rel="tag">부스트코스</a>
+                    <a class="has-link-grey -link" href="/tags/jsp/" rel="tag">jsp</a>, <a class="has-link-grey -link" href="/tags/servlet/" rel="tag">servlet</a>, <a class="has-link-grey -link" href="/tags/%EB%B6%80%EC%8A%A4%ED%8A%B8%EC%BD%94%EC%8A%A4/" rel="tag">부스트코스</a>
                 </div>
             </div>
         </div>
@@ -255,17 +224,10 @@ HTTP는 기본적으로 **Request(요청)**과 **Response(응답)** 으로 나�
 <div class="card card-transparent">
     <div class="level post-navigation is-flex-wrap is-mobile">
         
-        <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/2020/01/30/Booster/how-browser-work/">
-                <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">[부스트코스] 브라우저의 작동 방식</span>
-            </a>
-        </div>
-        
         
         <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/2020/01/26/Booster/new-category-boostcourse/">
-                <span class="level-item">부스트코스 서포터즈 BOOSTER</span>
+            <a class="level level-item has-link-grey  article-nav-next" href="/2020/02/13/Booster/what-is-was/">
+                <span class="level-item">[부스트코스] WAS란?</span>
                 <i class="level-item fas fa-chevron-right"></i>
             </a>
         </div>
@@ -310,41 +272,29 @@ s.setAttribute('data-timestamp', +new Date());
                     카탈로그
                 </h3>
                 <ul class="menu-list"><li>
-        <a class="is-flex" href="#HTTP-Hypertext-Transfer-Protocol-이란">
+        <a class="is-flex" href="#자바-웹-어플리케이션-구조">
         <span class="has-mr-6">1</span>
-        <span>HTTP(Hypertext Transfer Protocol) 이란?</span>
+        <span>자바 웹 어플리케이션 구조</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#web-xml-파일">
+        <span class="has-mr-6">1.1</span>
+        <span>web.xml 파일</span>
         </a></li><li>
-        <a class="is-flex" href="#HTTP-작동-방식">
+        <a class="is-flex" href="#lib-폴더">
+        <span class="has-mr-6">1.2</span>
+        <span>lib 폴더</span>
+        </a></li><li>
+        <a class="is-flex" href="#classes-폴더">
+        <span class="has-mr-6">1.3</span>
+        <span>classes 폴더</span>
+        </a></li><li>
+        <a class="is-flex" href="#WEB-INF-폴더-이외의-폴더들">
+        <span class="has-mr-6">1.4</span>
+        <span>WEB-INF 폴더 이외의 폴더들</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#Servlet-이란">
         <span class="has-mr-6">2</span>
-        <span>HTTP 작동 방식</span>
-        </a><ul class="menu-list"><li>
-        <a class="is-flex" href="#HTTP-특징">
-        <span class="has-mr-6">2.1</span>
-        <span>HTTP 특징</span>
-        </a></li></ul></li><li>
-        <a class="is-flex" href="#URL-Uniform-Resorce-Locator">
-        <span class="has-mr-6">3</span>
-        <span>URL(Uniform Resorce Locator)</span>
-        </a></li><li>
-        <a class="is-flex" href="#HTTP-Header">
-        <span class="has-mr-6">4</span>
-        <span>HTTP Header</span>
-        </a><ul class="menu-list"><li>
-        <a class="is-flex" href="#요청-URL">
-        <span class="has-mr-6">4.1</span>
-        <span>요청 URL</span>
-        </a></li><li>
-        <a class="is-flex" href="#요청-메서드">
-        <span class="has-mr-6">4.2</span>
-        <span>요청 메서드</span>
-        </a></li><li>
-        <a class="is-flex" href="#쿠키">
-        <span class="has-mr-6">4.3</span>
-        <span>쿠키</span>
-        </a></li></ul></li><li>
-        <a class="is-flex" href="#HTTPS">
-        <span class="has-mr-6">5</span>
-        <span>HTTPS?</span>
+        <span>Servlet 이란?</span>
         </a></li></ul>
             </div>
         </div>
@@ -434,7 +384,7 @@ s.setAttribute('data-timestamp', +new Date());
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.png" alt="[부스트코스] HTTP 프로토콜이란?" height="28">
+                    <img src="/images/logo.png" alt="[부스트코스] Servlet." height="28">
                 
                 </a>
                 <p class="is-size-7">
