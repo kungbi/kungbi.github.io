@@ -8,8 +8,16 @@
     </url>
 
     <url>
+        <loc>http://kungbi.github.io/2020/02/29/Booster/request-response/</loc>
+        <lastmod>2020-02-28T22:07:33.845Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://kungbi.github.io/2020/02/28/Booster/life-cycle-servlet/</loc>
-        <lastmod>2020-02-28T21:36:13.445Z</lastmod>
+        <lastmod>2020-02-28T22:07:32.236Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 

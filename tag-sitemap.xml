@@ -3,15 +3,29 @@
 
 
     <url>
+        <loc>http://kungbi.github.io/tags/response/</loc>
+        <lastmod>2020-02-28T22:07:33.845Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://kungbi.github.io/tags/request/</loc>
+        <lastmod>2020-02-28T22:07:33.845Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>http://kungbi.github.io/tags/servlet/</loc>
-        <lastmod>2020-02-28T21:36:13.445Z</lastmod>
+        <lastmod>2020-02-28T22:07:33.845Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://kungbi.github.io/tags/%25EB%25B6%2580%25EC%258A%25A4%25ED%258A%25B8%25EC%25BD%2594%25EC%258A%25A4/</loc>
-        <lastmod>2020-02-28T21:36:13.445Z</lastmod>
+        <lastmod>2020-02-28T22:07:33.845Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

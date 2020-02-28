@@ -20,7 +20,7 @@
 <meta property="og:locale" content="ko_KR">
 <meta property="og:image" content="http://kungbi.github.io/gallery/servlet-lifecycle.jpeg">
 <meta property="article:published_time" content="2020-02-27T21:08:36.000Z">
-<meta property="article:modified_time" content="2020-02-28T21:36:13.445Z">
+<meta property="article:modified_time" content="2020-02-28T22:07:32.236Z">
 <meta property="article:author" content="Woongbi Shin">
 <meta property="article:tag" content="부스트코스">
 <meta property="article:tag" content="servlet">
@@ -190,19 +190,24 @@
 </ol>
 <img src="/gallery/servlet-lifecycle.jpeg">
 
+<hr>
 <h2 id="실습"><a href="#실습" class="headerlink" title="실습"></a>실습</h2><h3 id="코드"><a href="#코드" class="headerlink" title="코드"></a>코드</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> examples;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.ServletConfig;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.ServletException;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.annotation.WebServlet;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpServlet;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpServletRequest;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpServletResponse;</span><br><span class="line"></span><br><span class="line"><span class="meta">@WebServlet</span>(<span class="string">"/LifeCycleServlet"</span>)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LifeCycleServlet</span> <span class="keyword">extends</span> <span class="title">HttpServlet</span> </span>&#123;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">long</span> serialVersionUID = <span class="number">1L</span>;</span><br><span class="line">       </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">LifeCycleServlet</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>();</span><br><span class="line">        System.out.println(<span class="string">"LifeCycleServlet 생성."</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">init</span><span class="params">(ServletConfig config)</span> <span class="keyword">throws</span> ServletException </span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"init 호출."</span>);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">destroy</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"destroy 호출."</span>);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">service</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException </span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"service 호출."</span>);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h3 id="결과"><a href="#결과" class="headerlink" title="결과"></a>결과</h3><h4 id="서버-실행-후-클라이언트에서-서블릿-요청시"><a href="#서버-실행-후-클라이언트에서-서블릿-요청시" class="headerlink" title="서버 실행 후 클라이언트에서 서블릿 요청시"></a>서버 실행 후 클라이언트에서 서블릿 요청시</h4><img src="/gallery/Screen Shot 2020-02-29 at 6.23.52 AM.png">
 
+<p><br><br></p>
 <h4 id="클라이언트에서-서블릿-요청시"><a href="#클라이언트에서-서블릿-요청시" class="headerlink" title="클라이언트에서 서블릿 요청시"></a>클라이언트에서 서블릿 요청시</h4><img src="/gallery/Screen Shot 2020-02-29 at 6.23.52 AM.png">
 
+<p><br><br></p>
 <h4 id="한번-더-요청시"><a href="#한번-더-요청시" class="headerlink" title="한번 더 요청시"></a>한번 더 요청시</h4><img src="/gallery/Screen Shot 2020-02-29 at 6.24.03 AM.png">
 
+<p><br><br></p>
 <h4 id="코드-수정-후"><a href="#코드-수정-후" class="headerlink" title="코드 수정 후"></a>코드 수정 후</h4><p>init() 메소드의 <code>System.out.println(&quot;init test 호출.&quot;)</code> 로 수정했다.</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">init</span><span class="params">(ServletConfig config)</span> <span class="keyword">throws</span> ServletException </span>&#123;</span><br><span class="line">  System.out.println(<span class="string">"init test 호출."</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <img src="/gallery/Screen Shot 2020-02-29 at 6.24.26 AM.png">
 
+<p><br><br></p>
 <h4 id="다시-요청"><a href="#다시-요청" class="headerlink" title="다시 요청"></a>다시 요청</h4><img src="/gallery/Screen Shot 2020-02-29 at 6.24.33 AM.png">
 
 <p><br></p><p align="center"><img src="/gallery/hufs_booster.jpg"></p><p></p>
@@ -234,6 +239,13 @@
 
 <div class="card card-transparent">
     <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2020/02/29/Booster/request-response/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">[부스트코스] request와 response 객체 이해하기</span>
+            </a>
+        </div>
         
         
         <div class="level-end">
@@ -346,7 +358,7 @@ s.setAttribute('data-timestamp', +new Date());
                 <span class="level-item">Devlog</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">18</span>
+                <span class="level-item tag">19</span>
             </span>
         </a><ul><li>
         <a class="level is-marginless" href="/categories/Devlog/Algorithm/">
@@ -362,7 +374,7 @@ s.setAttribute('data-timestamp', +new Date());
                 <span class="level-item">Boost Course</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">6</span>
+                <span class="level-item tag">7</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/Devlog/C/">
@@ -399,7 +411,7 @@ s.setAttribute('data-timestamp', +new Date());
         <h3 class="menu-label">
             태그 클라우드
         </h3>
-        <a href="/tags/MVC/" style="font-size: 12px;">MVC</a> <a href="/tags/ajex/" style="font-size: 10px;">ajex</a> <a href="/tags/algorithm/" style="font-size: 10px;">algorithm</a> <a href="/tags/baekjoon/" style="font-size: 12px;">baekjoon</a> <a href="/tags/booster/" style="font-size: 14px;">booster</a> <a href="/tags/browser/" style="font-size: 10px;">browser</a> <a href="/tags/c/" style="font-size: 12px;">c++</a> <a href="/tags/fetch/" style="font-size: 10px;">fetch</a> <a href="/tags/hash/" style="font-size: 10px;">hash</a> <a href="/tags/http/" style="font-size: 10px;">http</a> <a href="/tags/jsp/" style="font-size: 10px;">jsp</a> <a href="/tags/next-js/" style="font-size: 16px;">next.js</a> <a href="/tags/protocol/" style="font-size: 10px;">protocol</a> <a href="/tags/react/" style="font-size: 12px;">react</a> <a href="/tags/react-js/" style="font-size: 10px;">react.js</a> <a href="/tags/rendering/" style="font-size: 10px;">rendering</a> <a href="/tags/servlet/" style="font-size: 12px;">servlet</a> <a href="/tags/stl/" style="font-size: 10px;">stl</a> <a href="/tags/was/" style="font-size: 10px;">was</a> <a href="/tags/web/" style="font-size: 20px;">web</a> <a href="/tags/%EB%B6%80%EC%8A%A4%ED%8A%B8%EC%BD%94%EC%8A%A4/" style="font-size: 18px;">부스트코스</a>
+        <a href="/tags/MVC/" style="font-size: 12px;">MVC</a> <a href="/tags/ajex/" style="font-size: 10px;">ajex</a> <a href="/tags/algorithm/" style="font-size: 10px;">algorithm</a> <a href="/tags/baekjoon/" style="font-size: 12px;">baekjoon</a> <a href="/tags/booster/" style="font-size: 14px;">booster</a> <a href="/tags/browser/" style="font-size: 10px;">browser</a> <a href="/tags/c/" style="font-size: 12px;">c++</a> <a href="/tags/fetch/" style="font-size: 10px;">fetch</a> <a href="/tags/hash/" style="font-size: 10px;">hash</a> <a href="/tags/http/" style="font-size: 10px;">http</a> <a href="/tags/jsp/" style="font-size: 10px;">jsp</a> <a href="/tags/next-js/" style="font-size: 16px;">next.js</a> <a href="/tags/protocol/" style="font-size: 10px;">protocol</a> <a href="/tags/react/" style="font-size: 12px;">react</a> <a href="/tags/react-js/" style="font-size: 10px;">react.js</a> <a href="/tags/rendering/" style="font-size: 10px;">rendering</a> <a href="/tags/request/" style="font-size: 10px;">request</a> <a href="/tags/response/" style="font-size: 10px;">response</a> <a href="/tags/servlet/" style="font-size: 14px;">servlet</a> <a href="/tags/stl/" style="font-size: 10px;">stl</a> <a href="/tags/was/" style="font-size: 10px;">was</a> <a href="/tags/web/" style="font-size: 20px;">web</a> <a href="/tags/%EB%B6%80%EC%8A%A4%ED%8A%B8%EC%BD%94%EC%8A%A4/" style="font-size: 18px;">부스트코스</a>
     </div>
 </div>
     

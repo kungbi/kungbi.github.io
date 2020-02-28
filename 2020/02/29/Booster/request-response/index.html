@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+<link rel="canonical" href="http://kungbi.github.io/2020/02/29/booster/request-response/">
+
+<meta name="generator" content="Hexo 4.2.0">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<title>[부스트코스] request와 response 객체 이해하기 - Kungbi&#39;s IT Blog</title>
+
+
+    <meta name="description" content="request와 response 객체가 무엇인지와 사용법에 대한 포스팅입니다.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[부스트코스] request와 response 객체 이해하기">
+<meta property="og:url" content="http://kungbi.github.io/2020/02/29/Booster/request-response/index.html">
+<meta property="og:site_name" content="Kungbi&#39;s IT Blog">
+<meta property="og:description" content="request와 response 객체가 무엇인지와 사용법에 대한 포스팅입니다.">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="http://kungbi.github.io/gallery/server_response.jpg">
+<meta property="article:published_time" content="2020-02-28T21:09:01.000Z">
+<meta property="article:modified_time" content="2020-02-28T22:07:33.845Z">
+<meta property="article:author" content="Woongbi Shin">
+<meta property="article:tag" content="부스트코스">
+<meta property="article:tag" content="servlet">
+<meta property="article:tag" content="request">
+<meta property="article:tag" content="response">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://kungbi.github.io/gallery/server_response.jpg">
+
+
+
+
+
+
+
+<link rel="icon" href="/images/favicon.png">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css">
+
+
+    
+    
+<style>body>.footer,body>.navbar,body>.section{opacity:0}</style>
+
+    
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css">
+
+    
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.css">
+
+    
+    
+    
+    
+<link rel="stylesheet" href="/css/back-to-top.css">
+
+    
+    
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="/css/progressbar.css">
+<script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+    
+    
+    
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+<link rel="alternate" href="/atom.xml" title="Kungbi's IT Blog" type="application/atom+xml">
+</head>
+<body class="is-2-column">
+    <nav class="navbar navbar-main">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <a class="navbar-item navbar-logo" href="/">
+            
+                <img src="/images/logo.png" alt="[부스트코스] request와 response 객체 이해하기" height="28">
+            
+            </a>
+        </div>
+        <div class="navbar-menu">
+            
+            <div class="navbar-start">
+                
+                <a class="navbar-item" href="/">Home</a>
+                
+                <a class="navbar-item" href="/archives">Archives</a>
+                
+                <a class="navbar-item" href="/categories">Categories</a>
+                
+                <a class="navbar-item" href="/tags">Tags</a>
+                
+                <a class="navbar-item" href="/about">About</a>
+                
+            </div>
+            
+            <div class="navbar-end">
+                
+                    
+                    <a class="navbar-item" target="_blank" rel="external nofollow noopener noreferrer" title="Download on GitHub" href="https://github.com/kungbi">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                    
+                
+                
+                <a class="navbar-item is-hidden-tablet catalogue" title="카탈로그" href="javascript:;">
+                    <i class="fas fa-list-ul"></i>
+                </a>
+                
+                
+                <a class="navbar-item search" title="검색" href="javascript:;">
+                    <i class="fas fa-search"></i>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</nav>
+    
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-8-tablet is-8-desktop is-8-widescreen has-order-2 column-main">
+<div class="card">
+    
+    <div class="card-image">
+        <span class="image is-7by1">
+            <img class="thumbnail" src="/gallery/server_response.jpg" alt="[부스트코스] request와 response 객체 이해하기">
+        </span>
+    </div>
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2020-02-28T21:09:01.000Z">2020-02-29</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Devlog/">Devlog</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Devlog/Boost-Course/">Boost Course</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    5분 읽기 (대략 704 단어)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                [부스트코스] request와 response 객체 이해하기
+            
+        </h1>
+        <div class="content">
+            <p>request와 response 객체가 무엇인지와 사용법에 대한 포스팅입니다.</p>
+<a id="more"></a>
+
+<p><span style="color:gray;font-size:0.9rem">해당 포스팅은 <a href="http://www.edwith.org/boostcourse-web" rel="external nofollow noopener noreferrer" target="_blank">커넥트재단의 edwith boostcourse - Web Programming</a>의 강의 자료를 바탕으로 작성되었습니다.</span></p>
+<img src="/gallery/1_5_4_request_response.png">
+
+<h2 id="요청과-응답"><a href="#요청과-응답" class="headerlink" title="요청과 응답"></a>요청과 응답</h2><p>WAS는 웹브라우저로부터 servlet 요청을 받으면 다음과 같은 작업을 수행한다.</p>
+<ul>
+<li>브라우저가 요청할 때 가지고 있는 정보를 HttpServletRequest 객체를 생성하여 저장한다.</li>
+<li>웹 브라우저에게 응답을 보내기 위해 HttpServletResponse 객체를 생성한다.</li>
+<li>생성된 HttpServletRequest, HttpServletResponse 객체를 servlet에게 전달한다.</li>
+</ul>
+<h3 id="HttpServletRequest"><a href="#HttpServletRequest" class="headerlink" title="HttpServletRequest"></a>HttpServletRequest</h3><ul>
+<li>브라우저가 요청을 할 때 요청 정보들을 servlet에게 전달하기 위해 사용된다.</li>
+<li>헤더정보, 파라미터, 쿠키, URI, URL 등의 정보를 저장한다.</li>
+<li>Body의 Stream을 읽어 들이는 메소드가 존재한다.</li>
+</ul>
+<h3 id="HttpServletResponse"><a href="#HttpServletResponse" class="headerlink" title="HttpServletResponse"></a>HttpServletResponse</h3><ul>
+<li>WAS는 어떤 클라이언트가 요청을 보냈는지 알고 있고, 해당 클라이언트에게 응답을 보내기 위한 HttpServletResponse 객체를 생성하여 servlet에게 전달한다.</li>
+<li>servlet은 HttpServletResponse 객체를 사용하여 content type 설정, 데이터 전송을 한다.</li>
+</ul>
+<hr>
+<h2 id="HttpServletRequest-객체에-저장된-데이터-출력"><a href="#HttpServletRequest-객체에-저장된-데이터-출력" class="headerlink" title="HttpServletRequest 객체에 저장된 데이터 출력"></a>HttpServletRequest 객체에 저장된 데이터 출력</h2><p>HttpServletRequest 객체에 저장되어 있는 각종 데이터들을 출력해본다. </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> examples;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="keyword">import</span> java.io.PrintWriter;</span><br><span class="line"><span class="keyword">import</span> java.util.Enumeration;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.servlet.ServletException;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.annotation.WebServlet;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpServlet;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpServletRequest;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpServletResponse;</span><br><span class="line"></span><br><span class="line"><span class="meta">@WebServlet</span>(<span class="string">"/header"</span>)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HeaderServlet</span> <span class="keyword">extends</span> <span class="title">HttpServlet</span> </span>&#123;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">long</span> serialVersionUID = <span class="number">1L</span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">HeaderServlet</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">doGet</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException </span>&#123;</span><br><span class="line">		response.setContentType(<span class="string">"text/html"</span>);</span><br><span class="line">		PrintWriter out = response.getWriter();</span><br><span class="line">		out.println(<span class="string">"&lt;html&gt;"</span>);</span><br><span class="line">		out.println(<span class="string">"&lt;head&gt;&lt;title&gt;form&lt;/title&gt;&lt;/head&gt;"</span>);</span><br><span class="line">		out.println(<span class="string">"&lt;body&gt;"</span>);</span><br><span class="line"></span><br><span class="line">		Enumeration&lt;String&gt; headerNames = request.getHeaderNames();</span><br><span class="line">		<span class="keyword">while</span>(headerNames.hasMoreElements()) &#123;</span><br><span class="line">			String headerName = headerNames.nextElement();</span><br><span class="line">			String headerValue = request.getHeader(headerName);</span><br><span class="line">			out.println(headerName + <span class="string">" : "</span> + headerValue + <span class="string">" &lt;br&gt; "</span>);</span><br><span class="line">		&#125;		</span><br><span class="line">		</span><br><span class="line">		out.println(<span class="string">"&lt;/body&gt;"</span>);</span><br><span class="line">		out.println(<span class="string">"&lt;/html&gt;"</span>);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="결과"><a href="#결과" class="headerlink" title="결과"></a>결과</h3><img src="/gallery/Screen Shot 2020-02-29 at 7.00.24 AM.png">
+
+<hr>
+<h2 id="그-외의-요청정보-출력"><a href="#그-외의-요청정보-출력" class="headerlink" title="그 외의 요청정보 출력"></a>그 외의 요청정보 출력</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> examples;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="keyword">import</span> java.io.PrintWriter;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.servlet.ServletException;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.annotation.WebServlet;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpServlet;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpServletRequest;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpServletResponse;</span><br><span class="line"></span><br><span class="line"><span class="meta">@WebServlet</span>(<span class="string">"/info"</span>)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">InfoServlet</span> <span class="keyword">extends</span> <span class="title">HttpServlet</span> </span>&#123;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">long</span> serialVersionUID = <span class="number">1L</span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">InfoServlet</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">doGet</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException </span>&#123;</span><br><span class="line">		response.setContentType(<span class="string">"text/html"</span>);</span><br><span class="line">		PrintWriter out = response.getWriter();</span><br><span class="line">		out.println(<span class="string">"&lt;html&gt;"</span>);</span><br><span class="line">		out.println(<span class="string">"&lt;head&gt;&lt;title&gt;info&lt;/title&gt;&lt;/head&gt;"</span>);</span><br><span class="line">		out.println(<span class="string">"&lt;body&gt;"</span>);</span><br><span class="line"></span><br><span class="line">		String uri = request.getRequestURI();</span><br><span class="line">		StringBuffer url = request.getRequestURL();</span><br><span class="line">		String contentPath = request.getContextPath();</span><br><span class="line">		String remoteAddr = request.getRemoteAddr();</span><br><span class="line">		</span><br><span class="line">		</span><br><span class="line">		out.println(<span class="string">"uri : "</span> + uri + <span class="string">"&lt;br&gt;"</span>);</span><br><span class="line">		out.println(<span class="string">"url : "</span> + url + <span class="string">"&lt;br&gt;"</span>);</span><br><span class="line">		out.println(<span class="string">"contentPath : "</span> + contentPath + <span class="string">"&lt;br&gt;"</span>);</span><br><span class="line">		out.println(<span class="string">"remoteAddr : "</span> + remoteAddr + <span class="string">"&lt;br&gt;"</span>);</span><br><span class="line">		</span><br><span class="line">		out.println(<span class="string">"&lt;/body&gt;"</span>);</span><br><span class="line">		out.println(<span class="string">"&lt;/html&gt;"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="결과-1"><a href="#결과-1" class="headerlink" title="결과"></a>결과</h3><img src="/gallery/Screen Shot 2020-02-29 at 7.01.32 AM.png">
+
+<hr>
+<h2 id="Get-방식의-파라미터-읽어-들이기"><a href="#Get-방식의-파라미터-읽어-들이기" class="headerlink" title="Get 방식의 파라미터 읽어 들이기"></a>Get 방식의 파라미터 읽어 들이기</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> examples;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="keyword">import</span> java.io.PrintWriter;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.servlet.ServletException;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.annotation.WebServlet;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpServlet;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpServletRequest;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpServletResponse;</span><br><span class="line"></span><br><span class="line"><span class="meta">@WebServlet</span>(<span class="string">"/param"</span>)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ParameterServlet</span> <span class="keyword">extends</span> <span class="title">HttpServlet</span> </span>&#123;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">long</span> serialVersionUID = <span class="number">1L</span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">ParameterServlet</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">doGet</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException </span>&#123;</span><br><span class="line">		response.setContentType(<span class="string">"text/html;charset=utf-8"</span>);</span><br><span class="line">		PrintWriter out = response.getWriter();</span><br><span class="line">		out.println(<span class="string">"&lt;html&gt;"</span>);</span><br><span class="line">		out.println(<span class="string">"&lt;head&gt;&lt;title&gt;form&lt;/title&gt;&lt;/head&gt;"</span>);</span><br><span class="line">		out.println(<span class="string">"&lt;body&gt;"</span>);</span><br><span class="line">		</span><br><span class="line">		String name = request.getParameter(<span class="string">"name"</span>);</span><br><span class="line">		String age = request.getParameter(<span class="string">"age"</span>);</span><br><span class="line">		</span><br><span class="line">		out.println(<span class="string">"name : "</span> + name + <span class="string">"&lt;br/&gt;"</span>);</span><br><span class="line">		out.println(<span class="string">"age : "</span> + age + <span class="string">"&lt;br/&gt;"</span>);</span><br><span class="line">		</span><br><span class="line">		out.println(<span class="string">"&lt;/body&gt;"</span>);</span><br><span class="line">		out.println(<span class="string">"&lt;/html&gt;"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="파라미터-값이-없을-경우"><a href="#파라미터-값이-없을-경우" class="headerlink" title="파라미터 값이 없을 경우"></a>파라미터 값이 없을 경우</h3><img src="/gallery/Screen Shot 2020-02-29 at 7.03.11 AM.png">
+
+<h3 id="파라미터-값이-있을-경우"><a href="#파라미터-값이-있을-경우" class="headerlink" title="파라미터 값이 있을 경우"></a>파라미터 값이 있을 경우</h3><img src="/gallery/Screen Shot 2020-02-29 at 7.04.09 AM.png">
+
+<p><br></p><p align="center"><img src="/gallery/hufs_booster.jpg"></p><p></p>
+
+        </div>
+        
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/request/" rel="tag">request</a>, <a class="has-link-grey -link" href="/tags/response/" rel="tag">response</a>, <a class="has-link-grey -link" href="/tags/servlet/" rel="tag">servlet</a>, <a class="has-link-grey -link" href="/tags/%EB%B6%80%EC%8A%A4%ED%8A%B8%EC%BD%94%EC%8A%A4/" rel="tag">부스트코스</a>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        
+<div class="sharethis-inline-share-buttons"></div>
+<script type="text/javascript" src="//platform-api.sharethis.com/js/sharethis.js#property=5e1094a2f1a1cf0012565702&amp;product=inline-share-buttons&amp;cms=sop" async="async"></script>
+
+        
+    </div>
+</div>
+
+
+
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2020/02/28/Booster/life-cycle-servlet/">
+                <span class="level-item">[부스트코스] Servlet의 life cycle</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
+
+
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="title is-5 has-text-weight-normal">댓글</h3>
+        <div id="disqus_thread"></div>
+<script>
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://kungbi-github-io.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="external nofollow noopener noreferrer" target="_blank">comments powered by Disqus.</a></noscript>
+
+    </div>
+</div>
+
+</div>
+                
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-4-widescreen  has-order-3 column-right is-sticky">
+    
+        
+
+    <div class="card widget" id="toc">
+        <div class="card-content">
+            <div class="menu">
+                <h3 class="menu-label">
+                    카탈로그
+                </h3>
+                <ul class="menu-list"><li>
+        <a class="is-flex" href="#요청과-응답">
+        <span class="has-mr-6">1</span>
+        <span>요청과 응답</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#HttpServletRequest">
+        <span class="has-mr-6">1.1</span>
+        <span>HttpServletRequest</span>
+        </a></li><li>
+        <a class="is-flex" href="#HttpServletResponse">
+        <span class="has-mr-6">1.2</span>
+        <span>HttpServletResponse</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#HttpServletRequest-객체에-저장된-데이터-출력">
+        <span class="has-mr-6">2</span>
+        <span>HttpServletRequest 객체에 저장된 데이터 출력</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#결과">
+        <span class="has-mr-6">2.1</span>
+        <span>결과</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#그-외의-요청정보-출력">
+        <span class="has-mr-6">3</span>
+        <span>그 외의 요청정보 출력</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#결과-1">
+        <span class="has-mr-6">3.1</span>
+        <span>결과</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#Get-방식의-파라미터-읽어-들이기">
+        <span class="has-mr-6">4</span>
+        <span>Get 방식의 파라미터 읽어 들이기</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#파라미터-값이-없을-경우">
+        <span class="has-mr-6">4.1</span>
+        <span>파라미터 값이 없을 경우</span>
+        </a></li><li>
+        <a class="is-flex" href="#파라미터-값이-있을-경우">
+        <span class="has-mr-6">4.2</span>
+        <span>파라미터 값이 있을 경우</span>
+        </a></li></ul></li></ul>
+            </div>
+        </div>
+    </div>
+
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                카테고리
+            </h3>
+            <ul class="menu-list">
+            <li>
+        <a class="level is-marginless" href="/categories/Devlog/">
+            <span class="level-start">
+                <span class="level-item">Devlog</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">19</span>
+            </span>
+        </a><ul><li>
+        <a class="level is-marginless" href="/categories/Devlog/Algorithm/">
+            <span class="level-start">
+                <span class="level-item">Algorithm</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">3</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/Devlog/Boost-Course/">
+            <span class="level-start">
+                <span class="level-item">Boost Course</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">7</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/Devlog/C/">
+            <span class="level-start">
+                <span class="level-item">C++</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/Devlog/Next-js/">
+            <span class="level-start">
+                <span class="level-item">Next.js</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">5</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/Devlog/Web/">
+            <span class="level-start">
+                <span class="level-item">Web</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">3</span>
+            </span>
+        </a></li></ul></li>
+            </ul>
+        </div>
+    </div>
+</div>
+    
+        <div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            태그 클라우드
+        </h3>
+        <a href="/tags/MVC/" style="font-size: 12px;">MVC</a> <a href="/tags/ajex/" style="font-size: 10px;">ajex</a> <a href="/tags/algorithm/" style="font-size: 10px;">algorithm</a> <a href="/tags/baekjoon/" style="font-size: 12px;">baekjoon</a> <a href="/tags/booster/" style="font-size: 14px;">booster</a> <a href="/tags/browser/" style="font-size: 10px;">browser</a> <a href="/tags/c/" style="font-size: 12px;">c++</a> <a href="/tags/fetch/" style="font-size: 10px;">fetch</a> <a href="/tags/hash/" style="font-size: 10px;">hash</a> <a href="/tags/http/" style="font-size: 10px;">http</a> <a href="/tags/jsp/" style="font-size: 10px;">jsp</a> <a href="/tags/next-js/" style="font-size: 16px;">next.js</a> <a href="/tags/protocol/" style="font-size: 10px;">protocol</a> <a href="/tags/react/" style="font-size: 12px;">react</a> <a href="/tags/react-js/" style="font-size: 10px;">react.js</a> <a href="/tags/rendering/" style="font-size: 10px;">rendering</a> <a href="/tags/request/" style="font-size: 10px;">request</a> <a href="/tags/response/" style="font-size: 10px;">response</a> <a href="/tags/servlet/" style="font-size: 14px;">servlet</a> <a href="/tags/stl/" style="font-size: 10px;">stl</a> <a href="/tags/was/" style="font-size: 10px;">was</a> <a href="/tags/web/" style="font-size: 20px;">web</a> <a href="/tags/%EB%B6%80%EC%8A%A4%ED%8A%B8%EC%BD%94%EC%8A%A4/" style="font-size: 18px;">부스트코스</a>
+    </div>
+</div>
+    
+    
+</div>
+
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <a class="footer-logo is-block has-mb-6" href="/">
+                
+                    <img src="/images/logo.png" alt="[부스트코스] request와 response 객체 이해하기" height="28">
+                
+                </a>
+                <p class="is-size-7">
+                &copy; 2020 Woongbi Shin&nbsp;
+                Powered by <a href="https://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a> & <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="external nofollow noopener noreferrer">Icarus</a>
+                
+                </p>
+            </div>
+            <div class="level-end">
+            
+                <div class="field has-addons is-flex-center-mobile has-mt-5-mobile is-flex-wrap is-flex-middle">
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" rel="external nofollow noopener noreferrer" title="Creative Commons" href="https://creativecommons.org/">
+                        
+                        <i class="fab fa-creative-commons"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" rel="external nofollow noopener noreferrer" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/">
+                        
+                        <i class="fab fa-creative-commons-by"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" rel="external nofollow noopener noreferrer" title="Download on GitHub" href="https://github.com/kungbi">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                </p>
+                
+                </div>
+            
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("ko");</script>
+
+
+<script>
+var IcarusThemeSettings = {
+    site: {
+        url: 'http://kungbi.github.io',
+        external_link: {"enable":true,"exclude":[]}
+    },
+    article: {
+        highlight: {
+            clipboard: true,
+            fold: 'unfolded'
+        }
+    }
+};
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script>
+
+
+
+
+
+<script src="/js/animation.js"></script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script>
+<script src="/js/gallery.js" defer></script>
+
+
+
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/" rel="external nofollow noopener noreferrer" target="_blank">Update
+            my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.js" defer></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        });
+    });
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    MathJax.Hub.Config({
+        'HTML-CSS': {
+            matchFontHeight: false
+        },
+        SVG: {
+            matchFontHeight: false
+        },
+        CommonHTML: {
+            matchFontHeight: false
+        },
+        tex2jax: {
+            inlineMath: [
+                ['$','$'],
+                ['\\(','\\)']
+            ]
+        }
+    });
+});
+</script>
+
+
+<a id="back-to-top" title="Zurück nach oben" href="javascript:;">
+    <i class="fas fa-chevron-up"></i>
+</a>
+<script src="/js/back-to-top.js" defer></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="/js/main.js" defer></script>
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="입력 하세요...">
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: '포스트',
+                PAGES: '페이지',
+                CATEGORIES: '카테고리',
+                TAGS: '태그',
+                UNTITLED: '(제목없음)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js" defer></script>
+<link rel="stylesheet" href="/css/search.css">
+<link rel="stylesheet" href="/css/insight.css">
+    
+</body>
+</html>
