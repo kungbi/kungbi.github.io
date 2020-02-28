@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://kungbi.github.io/"/>
-  <updated>2020-02-21T22:01:10.226Z</updated>
+  <updated>2020-02-28T21:29:50.250Z</updated>
   <id>http://kungbi.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>[부스트코스] Servlet의 life cycle</title>
+    <link href="http://kungbi.github.io/2020/02/29/Booster/life-cycle-servlet/"/>
+    <id>http://kungbi.github.io/2020/02/29/Booster/life-cycle-servlet/</id>
+    <published>2020-02-28T21:08:36.000Z</published>
+    <updated>2020-02-28T21:29:50.250Z</updated>
+    
+    <content type="html"><![CDATA[<p>서블릿의 생명주기에 대해서 포스팅 해보려 한다.</p><a id="more"></a><p><span style="color:gray;font-size:0.9rem">해당 포스팅은 <a href="http://www.edwith.org/boostcourse-web" rel="external nofollow noopener noreferrer" target="_blank">커넥트재단의 edwith boostcourse - Web Programming</a>의 강의 자료를 바탕으로 작성되었습니다.</span></p><h2 id="LifecycleServlet"><a href="#LifecycleServlet" class="headerlink" title="LifecycleServlet"></a>LifecycleServlet</h2><h3 id="주요-서블릿-메소드"><a href="#주요-서블릿-메소드" class="headerlink" title="주요 서블릿 메소드"></a>주요 서블릿 메소드</h3><ul><li>init()</li><li>service(request, response)</li><li>destroy()</li></ul><h3 id="서블릿-생명주기-순서"><a href="#서블릿-생명주기-순서" class="headerlink" title="서블릿 생명주기 순서"></a>서블릿 생명주기 순서</h3><p><span style="color:red;">init() -&gt; service() -&gt; destroy()</span></p><ol><li>WAS는 서블릿 요청을 받으면 해당 <strong>서블릿이 메모리에 존재하는지 확인</strong>한다.</li><li>서블릿이 메모리에 존재하는지 확인<ol><li>메모리에 서블릿이 <strong>존재한다면</strong> service() 메소드를 실행한다.</li><li>메모리에 서블릿이 <strong>존재하지 않다면</strong> init() 메소드를 실행한다.</li></ol></li><li>WAS가 종료되거나, 웹 어플리케이션이 다른 코드로 갱신되면 destory() 메소드를 실행한다.</li></ol><img src="/gallery/servlet-lifecycle.jpeg"><h2 id="실습"><a href="#실습" class="headerlink" title="실습"></a>실습</h2><h3 id="코드"><a href="#코드" class="headerlink" title="코드"></a>코드</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> examples;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.ServletConfig;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.ServletException;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.annotation.WebServlet;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpServlet;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpServletRequest;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpServletResponse;</span><br><span class="line"></span><br><span class="line"><span class="meta">@WebServlet</span>(<span class="string">"/LifeCycleServlet"</span>)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LifeCycleServlet</span> <span class="keyword">extends</span> <span class="title">HttpServlet</span> </span>&#123;</span><br><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">long</span> serialVersionUID = <span class="number">1L</span>;</span><br><span class="line">       </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">LifeCycleServlet</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>();</span><br><span class="line">        System.out.println(<span class="string">"LifeCycleServlet 생성."</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">init</span><span class="params">(ServletConfig config)</span> <span class="keyword">throws</span> ServletException </span>&#123;</span><br><span class="line">System.out.println(<span class="string">"init 호출."</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">destroy</span><span class="params">()</span> </span>&#123;</span><br><span class="line">System.out.println(<span class="string">"destroy 호출."</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">service</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException </span>&#123;</span><br><span class="line">System.out.println(<span class="string">"service 호출."</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="결과"><a href="#결과" class="headerlink" title="결과"></a>결과</h3><h4 id="서버-실행-후-클라이언트에서-서블릿-요청시"><a href="#서버-실행-후-클라이언트에서-서블릿-요청시" class="headerlink" title="서버 실행 후 클라이언트에서 서블릿 요청시"></a>서버 실행 후 클라이언트에서 서블릿 요청시</h4><img src="/gallery/Screen Shot 2020-02-29 at 6.23.52 AM.png"><h4 id="클라이언트에서-서블릿-요청시"><a href="#클라이언트에서-서블릿-요청시" class="headerlink" title="클라이언트에서 서블릿 요청시"></a>클라이언트에서 서블릿 요청시</h4><img src="/gallery/Screen Shot 2020-02-29 at 6.23.52 AM.png"><h4 id="한번-더-요청시"><a href="#한번-더-요청시" class="headerlink" title="한번 더 요청시"></a>한번 더 요청시</h4><img src="/gallery/Screen Shot 2020-02-29 at 6.24.03 AM.png"><h4 id="코드-수정-후"><a href="#코드-수정-후" class="headerlink" title="코드 수정 후"></a>코드 수정 후</h4><p>init() 메소드의 <code>System.out.println(&quot;init test 호출.&quot;)</code> 로 수정했다.</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">init</span><span class="params">(ServletConfig config)</span> <span class="keyword">throws</span> ServletException </span>&#123;</span><br><span class="line">  System.out.println(<span class="string">"init test 호출."</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><img src="/gallery/Screen Shot 2020-02-29 at 6.24.26 AM.png"><h4 id="다시-요청"><a href="#다시-요청" class="headerlink" title="다시 요청"></a>다시 요청</h4><img src="/gallery/Screen Shot 2020-02-29 at 6.24.33 AM.png">]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;서블릿의 생명주기에 대해서 포스팅 해보려 한다.&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Devlog" scheme="http://kungbi.github.io/categories/Devlog/"/>
+    
+      <category term="Boost Course" scheme="http://kungbi.github.io/categories/Devlog/Boost-Course/"/>
+    
+    
+      <category term="부스트코스" scheme="http://kungbi.github.io/tags/%EB%B6%80%EC%8A%A4%ED%8A%B8%EC%BD%94%EC%8A%A4/"/>
+    
+      <category term="servlet" scheme="http://kungbi.github.io/tags/servlet/"/>
+    
+  </entry>
   
   <entry>
     <title>[부스트코스] Servlet.</title>
