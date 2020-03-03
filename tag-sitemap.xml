@@ -3,6 +3,34 @@
 
 
     <url>
+        <loc>http://kungbi.github.io/tags/Dynamic-programming/</loc>
+        <lastmod>2020-03-03T19:05:57.997Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://kungbi.github.io/tags/c/</loc>
+        <lastmod>2020-03-03T19:05:57.997Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://kungbi.github.io/tags/baekjoon/</loc>
+        <lastmod>2020-03-03T19:05:57.997Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://kungbi.github.io/tags/hash/</loc>
+        <lastmod>2020-03-03T18:53:49.566Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>http://kungbi.github.io/tags/response/</loc>
         <lastmod>2020-02-28T22:07:33.845Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -54,27 +82,6 @@
     <url>
         <loc>http://kungbi.github.io/tags/web/</loc>
         <lastmod>2020-02-12T21:17:21.525Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://kungbi.github.io/tags/hash/</loc>
-        <lastmod>2020-02-12T20:57:32.103Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://kungbi.github.io/tags/c/</loc>
-        <lastmod>2020-02-12T20:57:32.103Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://kungbi.github.io/tags/baekjoon/</loc>
-        <lastmod>2020-02-12T20:57:32.103Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
