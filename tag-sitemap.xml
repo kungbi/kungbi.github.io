@@ -3,6 +3,34 @@
 
 
     <url>
+        <loc>http://kungbi.github.io/tags/c/</loc>
+        <lastmod>2020-03-05T08:36:39.360Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://kungbi.github.io/tags/baekjoon/</loc>
+        <lastmod>2020-03-05T08:36:39.360Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://kungbi.github.io/tags/hash/</loc>
+        <lastmod>2020-03-05T08:36:25.747Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://kungbi.github.io/tags/Dynamic-programming/</loc>
+        <lastmod>2020-03-05T08:36:10.220Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>http://kungbi.github.io/tags/event/</loc>
         <lastmod>2020-03-05T08:11:56.006Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -19,34 +47,6 @@
     <url>
         <loc>http://kungbi.github.io/tags/%25EB%25B6%2580%25EC%258A%25A4%25ED%258A%25B8%25EC%25BD%2594%25EC%258A%25A4/</loc>
         <lastmod>2020-03-05T08:11:56.006Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://kungbi.github.io/tags/Dynamic-programming/</loc>
-        <lastmod>2020-03-03T19:05:57.997Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://kungbi.github.io/tags/c/</loc>
-        <lastmod>2020-03-03T19:05:57.997Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://kungbi.github.io/tags/baekjoon/</loc>
-        <lastmod>2020-03-03T19:05:57.997Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://kungbi.github.io/tags/hash/</loc>
-        <lastmod>2020-03-03T18:53:49.566Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
