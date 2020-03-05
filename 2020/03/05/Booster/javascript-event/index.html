@@ -2,33 +2,31 @@
 <html lang="ko">
 <head>
     <meta charset="utf-8">
-<link rel="canonical" href="http://kungbi.github.io/2020/01/29/booster/http-protocol/">
+<link rel="canonical" href="http://kungbi.github.io/2020/03/05/booster/javascript-event/">
 
 <meta name="generator" content="Hexo 4.2.0">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-<title>[부스트코스] HTTP 프로토콜이란? - Kungbi&#39;s IT Blog</title>
+<title>[부스트코스] Javascript 이벤트 - Kungbi&#39;s IT Blog</title>
 
 
-    <meta name="description" content="웹 브라우저와 웹 서버 간에 서로 통신하기 위해서는 일종의 규약이 필요하다. 이때 필요한 규약이 HTTP이다. 이번 포스팅에선 HTTP에 대하여 글을 써보려고 한다.">
+    <meta name="description" content="JavaScript로 마우스로 클릭하거나, 화면을 스크롤 하는 등 여러 event를 감지해 원하는 작업을 하도록 하는 방법에 대한 포스팅 입니다.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="[부스트코스] HTTP 프로토콜이란?">
-<meta property="og:url" content="http://kungbi.github.io/2020/01/29/Booster/http-protocol/index.html">
+<meta property="og:title" content="[부스트코스] Javascript 이벤트">
+<meta property="og:url" content="http://kungbi.github.io/2020/03/05/Booster/javascript-event/index.html">
 <meta property="og:site_name" content="Kungbi&#39;s IT Blog">
-<meta property="og:description" content="웹 브라우저와 웹 서버 간에 서로 통신하기 위해서는 일종의 규약이 필요하다. 이때 필요한 규약이 HTTP이다. 이번 포스팅에선 HTTP에 대하여 글을 써보려고 한다.">
+<meta property="og:description" content="JavaScript로 마우스로 클릭하거나, 화면을 스크롤 하는 등 여러 event를 감지해 원하는 작업을 하도록 하는 방법에 대한 포스팅 입니다.">
 <meta property="og:locale" content="ko_KR">
-<meta property="og:image" content="http://kungbi.github.io/gallery/http.png">
-<meta property="article:published_time" content="2020-01-28T16:23:19.000Z">
-<meta property="article:modified_time" content="2020-02-12T17:20:00.103Z">
+<meta property="og:image" content="http://kungbi.github.io/gallery/1iot43by.jpeg">
+<meta property="article:published_time" content="2020-03-05T07:15:30.000Z">
+<meta property="article:modified_time" content="2020-03-05T08:11:56.006Z">
 <meta property="article:author" content="Woongbi Shin">
 <meta property="article:tag" content="부스트코스">
-<meta property="article:tag" content="web">
-<meta property="article:tag" content="booster">
-<meta property="article:tag" content="protocol">
-<meta property="article:tag" content="http">
+<meta property="article:tag" content="javascript">
+<meta property="article:tag" content="event">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://kungbi.github.io/gallery/http.png">
+<meta name="twitter:image" content="http://kungbi.github.io/gallery/1iot43by.jpeg">
 
 
 
@@ -88,7 +86,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.png" alt="[부스트코스] HTTP 프로토콜이란?" height="28">
+                <img src="/images/logo.png" alt="[부스트코스] Javascript 이벤트" height="28">
             
             </a>
         </div>
@@ -141,7 +139,7 @@
     
     <div class="card-image">
         <span class="image is-7by1">
-            <img class="thumbnail" src="/gallery/http.png" alt="[부스트코스] HTTP 프로토콜이란?">
+            <img class="thumbnail" src="/gallery/1iot43by.jpeg" alt="[부스트코스] Javascript 이벤트">
         </span>
     </div>
     
@@ -149,7 +147,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2020-01-28T16:23:19.000Z">2020-01-29</time>
+                <time class="level-item has-text-grey" datetime="2020-03-05T07:15:30.000Z">2020-03-05</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/Devlog/">Devlog</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Devlog/Boost-Course/">Boost Course</a>
@@ -159,7 +157,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    8분 읽기 (대략 1204 단어)
+                    2분 읽기 (대략 350 단어)
                 </span>
                 
                 
@@ -168,72 +166,42 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                [부스트코스] HTTP 프로토콜이란?
+                [부스트코스] Javascript 이벤트
             
         </h1>
         <div class="content">
-            <p>웹 브라우저와 웹 서버 간에 서로 통신하기 위해서는 일종의 규약이 필요하다. 이때 필요한 규약이 HTTP이다. 이번 포스팅에선 HTTP에 대하여 글을 써보려고 한다.</p>
+            <p>JavaScript로 마우스로 클릭하거나, 화면을 스크롤 하는 등 여러 event를 감지해 원하는 작업을 하도록 하는 방법에 대한 포스팅 입니다.</p>
 <a id="more"></a>
 
 <p><span style="color:gray;font-size:0.9rem">해당 포스팅은 <a href="http://www.edwith.org/boostcourse-web" rel="external nofollow noopener noreferrer" target="_blank">커넥트재단의 edwith boostcourse - Web Programming</a>의 강의 자료를 바탕으로 작성되었습니다.</span></p>
+<h2 id="Event"><a href="#Event" class="headerlink" title="Event"></a>Event</h2><p>브라우저를 사용하면 많은 이벤트들이 발생한다.</p>
+<p>마우스 이벤트, 키보드 이벤트, 폼 이벤트, 문서 이벤트 등 정말 많은 이벤트들이 있다.</p>
+<p>이러한 이벤트들이 발생할 때 마다 우리는 특정 이벤트들이 발생할 때 어떠한 일을 하도록 JavaScript를 통해 시킬 수 있습니다.</p>
 <hr>
-<h2 id="HTTP-Hypertext-Transfer-Protocol-이란"><a href="#HTTP-Hypertext-Transfer-Protocol-이란" class="headerlink" title="HTTP(Hypertext Transfer Protocol) 이란?"></a>HTTP(Hypertext Transfer Protocol) 이란?</h2><p><strong>HTTP</strong>는 인터넷에서 데이터를 주고받기 위한 프로토콜이다. 프로토콜을 쉽게 말해서 규칙이라 보면 된다. 로컬에서만 동작하는(인터넷을 사용하지 않는) 소프트웨어가 아닌, 서버와 상호작용하는 소프트웨어를 개발한다면 <strong>HTTP Protocol</strong>에 대해서 기본적인 개념을 알아야 한다.</p>
-<p align="center"><img src="/gallery/193BE9374FED5A322362D9.jpeg" width="50%"></p>
-HTTP는 1989년 **팀 버너스리(Tim Berners-Lee)** 에 의해 처음 설계되어 인터넷을 통한 **World Wide Web(WWW)**을 기반으로 전 세계적인 정보공유를 이루는데 큰 역할을 했다.
+<h2 id="이벤트-등록"><a href="#이벤트-등록" class="headerlink" title="이벤트 등록"></a>이벤트 등록</h2><p>이벤트를 등록하려면 addEventListener 함수를 사용하면 된다.</p>
+<p>이는 <code>이벤트리스너(Event Listener)</code> 혹은 이벤트핸들러<code>(Event Handler)</code> 라고 불린다.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- test.html --&gt;</span></span><br><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"click"</span>&gt;</span>클릭하세요.<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">'test.js'</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<p>HTTP 말 그대로 hyper 초월의 뜻으로 hypertext는 <strong>그저 텍스트가 아닌 그 이상을 뛰어넘어 이미지, 동영상, 오디오 등을 표현</strong>할 수 있다는 의미로 해석하면 된다.</p>
-<p> <strong>HTTP</strong>는 웹에서만 사용하는 프로토콜로 <strong>TCP/IP</strong> 기반으로 한 지점에서 다른 지점으로 <strong>요청</strong>과 <strong>응답</strong>을 전송한다.</p>
+
+
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// test.js</span></span><br><span class="line"><span class="keyword">const</span> el = <span class="built_in">document</span>.querySelector(<span class="string">"#click"</span>);</span><br><span class="line">el.addEventListener(<span class="string">"click"</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="comment">//do something..</span></span><br><span class="line">&#125;, <span class="literal">false</span>);</span><br></pre></td></tr></table></figure>
+
 <hr>
-<h2 id="HTTP-작동-방식"><a href="#HTTP-작동-방식" class="headerlink" title="HTTP 작동 방식"></a>HTTP 작동 방식</h2><p align="center"><img src="/gallery/request-response.png"></p>
-HTTP는 기본적으로 **Request(요청)**과 **Response(응답)** 으로 나뉜다. **클라이언트(브라우저)**가 서버에 접속하면 Request를 하게 되고 **서버**에선 Request에 따라서 맞는 Response를 하게 된다. 
+<h2 id="이벤트-객체"><a href="#이벤트-객체" class="headerlink" title="이벤트 객체"></a>이벤트 객체</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// test.js</span></span><br><span class="line"><span class="keyword">const</span> el = <span class="built_in">document</span>.querySelector(<span class="string">"#click"</span>);</span><br><span class="line">el.addEventListener(<span class="string">"click"</span>, <span class="function"><span class="keyword">function</span>(<span class="params">evn</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(evn);</span><br><span class="line">    <span class="built_in">console</span>.log(evn.target);</span><br><span class="line">&#125;, <span class="literal">false</span>);</span><br></pre></td></tr></table></figure>
 
-<p>만약 <a href="http://naver.com" rel="external nofollow noopener noreferrer" target="_blank">http://naver.com</a> 에 접속하게 된다면, 네이버 서버는 <strong>네이버 홈페이지</strong>를 응답하게 되고 <a href="https://news.naver.com" rel="external nofollow noopener noreferrer" target="_blank">https://news.naver.com</a> 에 접속하면 네이버는 <strong>네이버 뉴스 페이지</strong>를 응답하게 된다. </p>
-<h4 id="HTTP-특징"><a href="#HTTP-특징" class="headerlink" title="HTTP 특징"></a>HTTP 특징</h4><ul>
-<li>HTTP는 연결 상태를 유지하지 않는 <strong>비연결성 프로토콜</strong>이다.<br>따라서 서버 간의 최대 연결 수보다 훨씬 많은 요청과 응답을 처리할 수 있다.<br>그러나 연결을 끊어버리기 때문에, 클라이언트의 이전 상황을 알 수가 없다. 이러한 단점을 해결하기 위해 <strong>Cookie</strong>와 <strong>Seesion</strong> 등장하게 된다.</li>
-<li>HTTP는 연결을 유지하지 않는 프로토콜이기 떄문에 <strong>요청/응답(request/response)</strong> 방식으로 동작한다.</li>
-</ul>
-<hr>
-<h2 id="URL-Uniform-Resorce-Locator"><a href="#URL-Uniform-Resorce-Locator" class="headerlink" title="URL(Uniform Resorce Locator)"></a>URL(Uniform Resorce Locator)</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://kungbi.github.io</span><br></pre></td></tr></table></figure>
+<h3 id="결과"><a href="#결과" class="headerlink" title="결과"></a>결과</h3><img src="/gallery/Screen Shot 2020-03-05 at 5.03.22 PM.png">
 
-<ul>
-<li><strong>URL</strong>은 인터넷 상의 <strong>자원(컴퓨터)</strong>가 어디에 있는지를 알려주기 위한 규약이다. </li>
-<li>집 주소(도로명 주소)와 똑같은 개념이다. </li>
-<li>URL에 접속하기 위해선 해당 URL에 맞는 프로토콜을 알아야 하고, 그와 동일한 프로토콜로 접속해야 한다.</li>
-</ul>
-<hr>
-<h2 id="HTTP-Header"><a href="#HTTP-Header" class="headerlink" title="HTTP Header"></a>HTTP Header</h2><p align="center"><img src="/gallery/request_header.png" width="70%"></p>
-**HTTP Header**은 웹브라우저가 HTTP프로토콜을 이용해 요청 정보를 웹 서버로 전송할 때 HTTP 요청 헤더에 **부가적인 정보**를 담아 전송한다. 대표적인 몇가지를 소개하려고 한다.
+<p>결과를 보면 알겠지만 이벤트 객체에는 정말 많은 정보들이 있다. </p>
+<p>마우스 좌표나 키보드가 눌려진 여부 등이 있다. 이러한 속성을 이용할 수도 있다.</p>
+<p><br></p><p align="center"><img src="/gallery/hufs_booster.jpg"></p><p></p>
 
-<h4 id="요청-URL"><a href="#요청-URL" class="headerlink" title="요청 URL"></a>요청 URL</h4><ul>
-<li>요청을 하는 자원의 URL 의미한다.</li>
-</ul>
-<h4 id="요청-메서드"><a href="#요청-메서드" class="headerlink" title="요청 메서드"></a>요청 메서드</h4><ul>
-<li><strong>GET</strong> : 정보를 요청하기 위해 사용.</li>
-<li><strong>POST</strong>: 정보를 입력하기 위해 사용.</li>
-<li><strong>PUT</strong> : 정보를 수정하기 위해 사용.</li>
-<li><strong>DELETE</strong> : 정보를 삭제하기 위해 사용.</li>
-<li>…</li>
-</ul>
-<h4 id="쿠키"><a href="#쿠키" class="headerlink" title="쿠키"></a>쿠키</h4><ul>
-<li>HTTP의 비연결성의 단점을 해결하기 위해 사용자의 상태 정보를 저장하는 것을 쿠키라 한다. 요청을 할시에 쿠키를 같이 전송하여 인증을  시행한다. ex) 자동 로그인, 로그인 상태 유지</li>
-</ul>
-<hr>
-<h2 id="HTTPS"><a href="#HTTPS" class="headerlink" title="HTTPS?"></a>HTTPS?</h2><p align="center"><img src="/gallery/download.png" width="50%"></p>
-**HTTPS**는 **HTTP**와 같은 통신 프로토콜이다. 사용방식 또한 HTTP와 거의 비슷하다.
-
-<p>HTTP와 HTTPS와의 차이점은 <strong>HTTP의 취약점을 보완</strong>한 것에 있다. HTTP는 서버와 주고받는 패킷이 암호화 처리가 되어 있지 않아 만약 중간에 패킷을 가로챈다면 보안상 치명적인 결과를 가져올 수 있다.</p>
-<p>그래서 HTTPS는 HTTP의 취약점을 보완하기 위해 주고받는 모든 메시지를 암호화한다. 즉, 중간에 패킷을 가로챈다고 해도 암호화된 내용이 노출되기 떄문에 보안상 안전하고, 공유된 대칭키를 모르는 상황에서 암호화를 푼다는 것은 모든 경우의 키를 대입해야한다는 것이다.</p>
-<blockquote>
-<p> 만약 1024 비트(보통은 128비트 암호화)의 암호화라면, 평균적으로 2의 512승을 대입해야하며, 이것은2475880078570760000000000000.00이라는 수를 대입해야 한다는 뜻과 같다고 한다.</p>
-</blockquote>
-<p align="center"><img src="/gallery/hufs_booster.jpg"></p>
         </div>
         
         <div class="level is-size-7 is-uppercase">
             <div class="level-start">
                 <div class="level-item">
                     <span class="is-size-6 has-text-grey has-mr-7">#</span>
-                    <a class="has-link-grey -link" href="/tags/booster/" rel="tag">booster</a>, <a class="has-link-grey -link" href="/tags/http/" rel="tag">http</a>, <a class="has-link-grey -link" href="/tags/protocol/" rel="tag">protocol</a>, <a class="has-link-grey -link" href="/tags/web/" rel="tag">web</a>, <a class="has-link-grey -link" href="/tags/%EB%B6%80%EC%8A%A4%ED%8A%B8%EC%BD%94%EC%8A%A4/" rel="tag">부스트코스</a>
+                    <a class="has-link-grey -link" href="/tags/event/" rel="tag">event</a>, <a class="has-link-grey -link" href="/tags/javascript/" rel="tag">javascript</a>, <a class="has-link-grey -link" href="/tags/%EB%B6%80%EC%8A%A4%ED%8A%B8%EC%BD%94%EC%8A%A4/" rel="tag">부스트코스</a>
                 </div>
             </div>
         </div>
@@ -255,17 +223,10 @@ HTTP는 기본적으로 **Request(요청)**과 **Response(응답)** 으로 나�
 <div class="card card-transparent">
     <div class="level post-navigation is-flex-wrap is-mobile">
         
-        <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/2020/01/30/Booster/how-browser-work/">
-                <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">[부스트코스] 브라우저의 작동 방식</span>
-            </a>
-        </div>
-        
         
         <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/2020/01/26/Booster/new-category-boostcourse/">
-                <span class="level-item">부스트코스 서포터즈 BOOSTER</span>
+            <a class="level level-item has-link-grey  article-nav-next" href="/2020/03/04/Algorithm/baekjoon-1932/">
+                <span class="level-item">백준 1932번 문제</span>
                 <i class="level-item fas fa-chevron-right"></i>
             </a>
         </div>
@@ -310,42 +271,22 @@ s.setAttribute('data-timestamp', +new Date());
                     카탈로그
                 </h3>
                 <ul class="menu-list"><li>
-        <a class="is-flex" href="#HTTP-Hypertext-Transfer-Protocol-이란">
+        <a class="is-flex" href="#Event">
         <span class="has-mr-6">1</span>
-        <span>HTTP(Hypertext Transfer Protocol) 이란?</span>
+        <span>Event</span>
         </a></li><li>
-        <a class="is-flex" href="#HTTP-작동-방식">
+        <a class="is-flex" href="#이벤트-등록">
         <span class="has-mr-6">2</span>
-        <span>HTTP 작동 방식</span>
-        </a><ul class="menu-list"><li>
-        <a class="is-flex" href="#HTTP-특징">
-        <span class="has-mr-6">2.1</span>
-        <span>HTTP 특징</span>
-        </a></li></ul></li><li>
-        <a class="is-flex" href="#URL-Uniform-Resorce-Locator">
+        <span>이벤트 등록</span>
+        </a></li><li>
+        <a class="is-flex" href="#이벤트-객체">
         <span class="has-mr-6">3</span>
-        <span>URL(Uniform Resorce Locator)</span>
-        </a></li><li>
-        <a class="is-flex" href="#HTTP-Header">
-        <span class="has-mr-6">4</span>
-        <span>HTTP Header</span>
+        <span>이벤트 객체</span>
         </a><ul class="menu-list"><li>
-        <a class="is-flex" href="#요청-URL">
-        <span class="has-mr-6">4.1</span>
-        <span>요청 URL</span>
-        </a></li><li>
-        <a class="is-flex" href="#요청-메서드">
-        <span class="has-mr-6">4.2</span>
-        <span>요청 메서드</span>
-        </a></li><li>
-        <a class="is-flex" href="#쿠키">
-        <span class="has-mr-6">4.3</span>
-        <span>쿠키</span>
-        </a></li></ul></li><li>
-        <a class="is-flex" href="#HTTPS">
-        <span class="has-mr-6">5</span>
-        <span>HTTPS?</span>
-        </a></li></ul>
+        <a class="is-flex" href="#결과">
+        <span class="has-mr-6">3.1</span>
+        <span>결과</span>
+        </a></li></ul></li></ul>
             </div>
         </div>
     </div>
@@ -434,7 +375,7 @@ s.setAttribute('data-timestamp', +new Date());
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.png" alt="[부스트코스] HTTP 프로토콜이란?" height="28">
+                    <img src="/images/logo.png" alt="[부스트코스] Javascript 이벤트" height="28">
                 
                 </a>
                 <p class="is-size-7">

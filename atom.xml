@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://kungbi.github.io/"/>
-  <updated>2020-03-03T19:05:57.997Z</updated>
+  <updated>2020-03-05T08:11:56.006Z</updated>
   <id>http://kungbi.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>[부스트코스] Javascript 이벤트</title>
+    <link href="http://kungbi.github.io/2020/03/05/Booster/javascript-event/"/>
+    <id>http://kungbi.github.io/2020/03/05/Booster/javascript-event/</id>
+    <published>2020-03-05T07:15:30.000Z</published>
+    <updated>2020-03-05T08:11:56.006Z</updated>
+    
+    <content type="html"><![CDATA[<p>JavaScript로 마우스로 클릭하거나, 화면을 스크롤 하는 등 여러 event를 감지해 원하는 작업을 하도록 하는 방법에 대한 포스팅 입니다.</p><a id="more"></a><p><span style="color:gray;font-size:0.9rem">해당 포스팅은 <a href="http://www.edwith.org/boostcourse-web" rel="external nofollow noopener noreferrer" target="_blank">커넥트재단의 edwith boostcourse - Web Programming</a>의 강의 자료를 바탕으로 작성되었습니다.</span></p><h2 id="Event"><a href="#Event" class="headerlink" title="Event"></a>Event</h2><p>브라우저를 사용하면 많은 이벤트들이 발생한다.</p><p>마우스 이벤트, 키보드 이벤트, 폼 이벤트, 문서 이벤트 등 정말 많은 이벤트들이 있다.</p><p>이러한 이벤트들이 발생할 때 마다 우리는 특정 이벤트들이 발생할 때 어떠한 일을 하도록 JavaScript를 통해 시킬 수 있습니다.</p><hr><h2 id="이벤트-등록"><a href="#이벤트-등록" class="headerlink" title="이벤트 등록"></a>이벤트 등록</h2><p>이벤트를 등록하려면 addEventListener 함수를 사용하면 된다.</p><p>이는 <code>이벤트리스너(Event Listener)</code> 혹은 이벤트핸들러<code>(Event Handler)</code> 라고 불린다.</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- test.html --&gt;</span></span><br><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"click"</span>&gt;</span>클릭하세요.<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">'test.js'</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// test.js</span></span><br><span class="line"><span class="keyword">const</span> el = <span class="built_in">document</span>.querySelector(<span class="string">"#click"</span>);</span><br><span class="line">el.addEventListener(<span class="string">"click"</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="comment">//do something..</span></span><br><span class="line">&#125;, <span class="literal">false</span>);</span><br></pre></td></tr></table></figure><hr><h2 id="이벤트-객체"><a href="#이벤트-객체" class="headerlink" title="이벤트 객체"></a>이벤트 객체</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// test.js</span></span><br><span class="line"><span class="keyword">const</span> el = <span class="built_in">document</span>.querySelector(<span class="string">"#click"</span>);</span><br><span class="line">el.addEventListener(<span class="string">"click"</span>, <span class="function"><span class="keyword">function</span>(<span class="params">evn</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(evn);</span><br><span class="line">    <span class="built_in">console</span>.log(evn.target);</span><br><span class="line">&#125;, <span class="literal">false</span>);</span><br></pre></td></tr></table></figure><h3 id="결과"><a href="#결과" class="headerlink" title="결과"></a>결과</h3><img src="/gallery/Screen Shot 2020-03-05 at 5.03.22 PM.png"><p>결과를 보면 알겠지만 이벤트 객체에는 정말 많은 정보들이 있다. </p><p>마우스 좌표나 키보드가 눌려진 여부 등이 있다. 이러한 속성을 이용할 수도 있다.</p><p><br></p><p align="center"><img src="/gallery/hufs_booster.jpg"></p><p></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;JavaScript로 마우스로 클릭하거나, 화면을 스크롤 하는 등 여러 event를 감지해 원하는 작업을 하도록 하는 방법에 대한 포스팅 입니다.&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Devlog" scheme="http://kungbi.github.io/categories/Devlog/"/>
+    
+      <category term="Boost Course" scheme="http://kungbi.github.io/categories/Devlog/Boost-Course/"/>
+    
+    
+      <category term="부스트코스" scheme="http://kungbi.github.io/tags/%EB%B6%80%EC%8A%A4%ED%8A%B8%EC%BD%94%EC%8A%A4/"/>
+    
+      <category term="javascript" scheme="http://kungbi.github.io/tags/javascript/"/>
+    
+      <category term="event" scheme="http://kungbi.github.io/tags/event/"/>
+    
+  </entry>
   
   <entry>
     <title>백준 1932번 문제</title>
