@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://kungbi.github.io/"/>
-  <updated>2020-03-05T08:11:56.006Z</updated>
+  <updated>2020-03-07T21:34:07.584Z</updated>
   <id>http://kungbi.github.io/</id>
   
   <author>
@@ -15,6 +15,64 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>백준 1463번 문제 - 1로 만들기</title>
+    <link href="http://kungbi.github.io/2020/03/08/Algorithm/baekjoon-1463/"/>
+    <id>http://kungbi.github.io/2020/03/08/Algorithm/baekjoon-1463/</id>
+    <published>2020-03-07T21:24:40.000Z</published>
+    <updated>2020-03-07T21:34:07.584Z</updated>
+    
+    <content type="html"><![CDATA[<p>.</p><a id="more"></a><img src="/gallery/baekjoon-1463.png"><script src="https://gist.github.com/kungbi/a6107bb7f925efb508da011acfa67495.js"></script>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;.&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Devlog" scheme="http://kungbi.github.io/categories/Devlog/"/>
+    
+      <category term="Algorithm" scheme="http://kungbi.github.io/categories/Devlog/Algorithm/"/>
+    
+    
+      <category term="baekjoon" scheme="http://kungbi.github.io/tags/baekjoon/"/>
+    
+      <category term="c++" scheme="http://kungbi.github.io/tags/c/"/>
+    
+      <category term="Dynamic programming" scheme="http://kungbi.github.io/tags/Dynamic-programming/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>백준 2579번 문제 - 계단 오르기</title>
+    <link href="http://kungbi.github.io/2020/03/08/Algorithm/baekjoon-2579/"/>
+    <id>http://kungbi.github.io/2020/03/08/Algorithm/baekjoon-2579/</id>
+    <published>2020-03-07T21:24:30.000Z</published>
+    <updated>2020-03-07T21:34:14.987Z</updated>
+    
+    <content type="html"><![CDATA[<p>.</p><a id="more"></a><img src="/gallery/baekjoon-2579(1).png"><img src="/gallery/baekjoon-2579(2).png"><script src="https://gist.github.com/kungbi/d1d100fc1ecd7780b238f351cf8c56c5.js"></script>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;.&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Devlog" scheme="http://kungbi.github.io/categories/Devlog/"/>
+    
+      <category term="Algorithm" scheme="http://kungbi.github.io/categories/Devlog/Algorithm/"/>
+    
+    
+      <category term="baekjoon" scheme="http://kungbi.github.io/tags/baekjoon/"/>
+    
+      <category term="c++" scheme="http://kungbi.github.io/tags/c/"/>
+    
+      <category term="Dynamic programming" scheme="http://kungbi.github.io/tags/Dynamic-programming/"/>
+    
+  </entry>
   
   <entry>
     <title>[부스트코스] Javascript 이벤트</title>
@@ -79,7 +137,7 @@
     <link href="http://kungbi.github.io/2020/03/04/Algorithm/baekjoon-1904/"/>
     <id>http://kungbi.github.io/2020/03/04/Algorithm/baekjoon-1904/</id>
     <published>2020-03-03T19:01:44.000Z</published>
-    <updated>2020-03-05T08:35:57.192Z</updated>
+    <updated>2020-03-07T21:34:21.076Z</updated>
     
     <content type="html"><![CDATA[<p>.</p><a id="more"></a><img src="/gallery/baekjoon-1904.png"><script src="https://gist.github.com/kungbi/03c32f4f224dba7b5ecc11d2fb3f7650.js"></script>]]></content>
     
@@ -284,7 +342,7 @@
     <link href="http://kungbi.github.io/2020/02/11/Algorithm/baekjoon-10837/"/>
     <id>http://kungbi.github.io/2020/02/11/Algorithm/baekjoon-10837/</id>
     <published>2020-02-11T06:47:29.000Z</published>
-    <updated>2020-03-05T08:36:39.360Z</updated>
+    <updated>2020-03-07T21:27:12.732Z</updated>
     
     <content type="html"><![CDATA[<p>.</p><a id="more"></a><img src="/gallery/Screen Shot 2020-02-11 at 3.53.40 PM.png"><script src="https://gist.github.com/kungbi/2fafa6aee3ba8debe14035142aeb3d14.js"></script>]]></content>
     
