@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://kungbi.github.io/"/>
-  <updated>2020-03-13T21:56:22.806Z</updated>
+  <updated>2020-03-13T22:16:50.847Z</updated>
   <id>http://kungbi.github.io/</id>
   
   <author>
@@ -15,6 +15,93 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>백준 2798번 문제 - 블랙잭</title>
+    <link href="http://kungbi.github.io/2020/03/14/Algorithm/baekjoon-2798/"/>
+    <id>http://kungbi.github.io/2020/03/14/Algorithm/baekjoon-2798/</id>
+    <published>2020-03-13T22:14:30.000Z</published>
+    <updated>2020-03-13T22:16:50.847Z</updated>
+    
+    <content type="html"><![CDATA[<p>.</p><a id="more"></a><img src="/gallery/Screen Shot 2020-03-14 at 7.16.05 AM.png"><img src="/gallery/Screen Shot 2020-03-14 at 7.16.44 AM.png">]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;.&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Algorithm" scheme="http://kungbi.github.io/categories/Algorithm/"/>
+    
+      <category term="Brute Force" scheme="http://kungbi.github.io/categories/Algorithm/Brute-Force/"/>
+    
+    
+      <category term="baekjoon" scheme="http://kungbi.github.io/tags/baekjoon/"/>
+    
+      <category term="c++" scheme="http://kungbi.github.io/tags/c/"/>
+    
+      <category term="Brute Force" scheme="http://kungbi.github.io/tags/Brute-Force/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>백준 2992번 문제 - 쿼드트리</title>
+    <link href="http://kungbi.github.io/2020/03/14/Algorithm/baekjoon-1992/"/>
+    <id>http://kungbi.github.io/2020/03/14/Algorithm/baekjoon-1992/</id>
+    <published>2020-03-13T22:12:08.000Z</published>
+    <updated>2020-03-13T22:14:08.259Z</updated>
+    
+    <content type="html"><![CDATA[<p>.</p><a id="more"></a><img src="/gallery/Screen Shot 2020-03-14 at 7.12.58 AM.png"><img src="/gallery/Screen Shot 2020-03-14 at 7.13.27 AM.png"><script src="https://gist.github.com/kungbi/626fe96e3140906566d853e3e53d31f7.js"></script>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;.&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Algorithm" scheme="http://kungbi.github.io/categories/Algorithm/"/>
+    
+      <category term="Divide and Conquer" scheme="http://kungbi.github.io/categories/Algorithm/Divide-and-Conquer/"/>
+    
+    
+      <category term="baekjoon" scheme="http://kungbi.github.io/tags/baekjoon/"/>
+    
+      <category term="c++" scheme="http://kungbi.github.io/tags/c/"/>
+    
+      <category term="Divide and Conquer" scheme="http://kungbi.github.io/tags/Divide-and-Conquer/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>백준 2630번 문제 - 색종이 만들기</title>
+    <link href="http://kungbi.github.io/2020/03/14/Algorithm/baekjoon-2630/"/>
+    <id>http://kungbi.github.io/2020/03/14/Algorithm/baekjoon-2630/</id>
+    <published>2020-03-13T22:07:07.000Z</published>
+    <updated>2020-03-13T22:11:46.112Z</updated>
+    
+    <content type="html"><![CDATA[<p>.</p><a id="more"></a><img src="/gallery/Screen Shot 2020-03-14 at 7.09.09 AM.png"><img src="/gallery/Screen Shot 2020-03-14 at 7.09.57 AM.png"><img src="/gallery/Screen Shot 2020-03-14 at 7.10.14 AM.png"><script src="https://gist.github.com/kungbi/6866ddf77945c72ea11b4c57b43ae6e3.js"></script>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;.&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Algorithm" scheme="http://kungbi.github.io/categories/Algorithm/"/>
+    
+      <category term="Divide and Conquer" scheme="http://kungbi.github.io/categories/Algorithm/Divide-and-Conquer/"/>
+    
+    
+      <category term="baekjoon" scheme="http://kungbi.github.io/tags/baekjoon/"/>
+    
+      <category term="c++" scheme="http://kungbi.github.io/tags/c/"/>
+    
+      <category term="Divide and Conquer" scheme="http://kungbi.github.io/tags/Divide-and-Conquer/"/>
+    
+  </entry>
   
   <entry>
     <title>[부스트코스] Ajax</title>
