@@ -8,6 +8,13 @@
     </url>
 
     <url>
+        <loc>http://kungbi.github.io/categories/Boost-Course/</loc>
+        <lastmod>2020-03-13T21:56:22.806Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>http://kungbi.github.io/categories/Web/</loc>
         <lastmod>2020-03-07T21:41:38.957Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -31,13 +38,6 @@
     <url>
         <loc>http://kungbi.github.io/categories/C/</loc>
         <lastmod>2020-03-07T21:40:02.510Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://kungbi.github.io/categories/Boost-Course/</loc>
-        <lastmod>2020-03-07T21:39:47.642Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://kungbi.github.io/"/>
-  <updated>2020-03-07T21:38:06.115Z</updated>
+  <updated>2020-03-13T21:56:22.806Z</updated>
   <id>http://kungbi.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>[부스트코스] Ajax</title>
+    <link href="http://kungbi.github.io/2020/03/12/Booster/ajax/"/>
+    <id>http://kungbi.github.io/2020/03/12/Booster/ajax/</id>
+    <published>2020-03-12T14:02:41.000Z</published>
+    <updated>2020-03-13T21:56:22.806Z</updated>
+    
+    <content type="html"><![CDATA[<p>오늘은 서버와 클라이언트 사이에서 데이터 통신을 할 수 있게 하는 Ajax에 대해서 알아보려고 한다.</p><a id="more"></a><p><span style="color:gray;font-size:0.9rem">해당 포스팅은 <a href="http://www.edwith.org/boostcourse-web" rel="external nofollow noopener noreferrer" target="_blank">커넥트재단의 edwith boostcourse - Web Programming</a>의 강의 자료를 바탕으로 작성되었습니다.</span></p><h2 id="Ajax"><a href="#Ajax" class="headerlink" title="Ajax"></a>Ajax</h2><p>Ajax는 브라우저와 클라이언트와 통신을 하기 위한 기술이다. 브라우저에 데이터를 갱신할 때, 브라우저 새로코침 없이 서버로부터 데이터를 받는 것이 필요해서 만들어지게 되었다. -&gt; 더 좋은 UX를 제공할 수 있는 기술이 되었다.</p><p>Ajax로 통신 할 때에는 XML, Plain Text, JSON 등 다양한 데이터 포멧으로 주고받을 수 있다. 보통은 사용이 편리한 JSON을 사용한다. JSON은 다음과 같이 구성되어있다.(key - value 형식)</p><img src="/gallery/Screen Shot 2020-03-14 at 6.10.47 AM.png" style="width: 50%"><hr><h2 id="Ajax-실행코드"><a href="#Ajax-실행코드" class="headerlink" title="Ajax 실행코드"></a>Ajax 실행코드</h2><h3 id="get-전송"><a href="#get-전송" class="headerlink" title="get 전송"></a>get 전송</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">reqListener</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="keyword">this</span>.responseText);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> oReq = <span class="keyword">new</span> XMLHttpRequest(); <span class="comment">// XMLHttpRequest 객체 생성</span></span><br><span class="line">oReq.addEventListener(<span class="string">"load"</span>, reqListener); <span class="comment">// callback 함수 설정</span></span><br><span class="line">oReq.open(<span class="string">"GET"</span>, <span class="string">"http://www.example.org/example.txt"</span>); <span class="comment">// Get 방식 통신</span></span><br><span class="line">oReq.send(<span class="literal">null</span>);</span><br></pre></td></tr></table></figure><h3 id="post-전송"><a href="#post-전송" class="headerlink" title="post 전송"></a>post 전송</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">reqListener</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="keyword">this</span>.responseText);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> oReq = <span class="keyword">new</span> XMLHttpRequest(); <span class="comment">// XMLHttpRequest 객체 생성</span></span><br><span class="line">oReq.addEventListener(<span class="string">"load"</span>, reqListener); <span class="comment">// callback 함수 설정</span></span><br><span class="line">xhr.open(<span class="string">'POST'</span>, <span class="string">'https://www.zerocho.com/api/post/json'</span>); <span class="comment">// Post 방식 통신</span></span><br><span class="line">xhr.setRequestHeader(<span class="string">'Content-Type'</span>, <span class="string">'application/json'</span>); <span class="comment">// 컨텐츠타입을 json으로</span></span><br><span class="line">xhr.send(<span class="built_in">JSON</span>.stringify(data)); <span class="comment">// 데이터를 stringify해서 보냄</span></span><br></pre></td></tr></table></figure><p>XMLHttpRequest객체를 생성해서, open메서드로 요청을 준비하고, send메서드로 서버로 보낸다.</p><p>요청처리가 완료되면(서버에서 응답이 오면) load이벤트가 발생하고, 콜백함수가 실행된다.</p><p>콜백함수가 실행될 때는 이미 ajax함수는 반환하고 콜스택에서 사라진 상태이다. -&gt; 비동기</p><p><br></p><p align="center"><img src="/gallery/hufs_booster.jpg"></p><p></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;오늘은 서버와 클라이언트 사이에서 데이터 통신을 할 수 있게 하는 Ajax에 대해서 알아보려고 한다.&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Boost Course" scheme="http://kungbi.github.io/categories/Boost-Course/"/>
+    
+    
+      <category term="부스트코스" scheme="http://kungbi.github.io/tags/%EB%B6%80%EC%8A%A4%ED%8A%B8%EC%BD%94%EC%8A%A4/"/>
+    
+      <category term="javascript" scheme="http://kungbi.github.io/tags/javascript/"/>
+    
+      <category term="ajax" scheme="http://kungbi.github.io/tags/ajax/"/>
+    
+  </entry>
   
   <entry>
     <title>백준 1463번 문제 - 1로 만들기</title>

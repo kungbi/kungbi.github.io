@@ -2,30 +2,31 @@
 <html lang="ko">
 <head>
     <meta charset="utf-8">
-<link rel="canonical" href="http://kungbi.github.io/2020/03/04/algorithm/baekjoon-1904/">
+<link rel="canonical" href="http://kungbi.github.io/2020/03/12/booster/ajax/">
 
 <meta name="generator" content="Hexo 4.2.0">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-<title>백준 1904번 문제 - 01타일 - Kungbi&#39;s IT Blog</title>
+<title>[부스트코스] Ajax - Kungbi&#39;s IT Blog</title>
 
 
-    <meta name="description" content=".">
+    <meta name="description" content="오늘은 서버와 클라이언트 사이에서 데이터 통신을 할 수 있게 하는 Ajax에 대해서 알아보려고 한다.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="백준 1904번 문제 - 01타일">
-<meta property="og:url" content="http://kungbi.github.io/2020/03/04/Algorithm/baekjoon-1904/index.html">
+<meta property="og:title" content="[부스트코스] Ajax">
+<meta property="og:url" content="http://kungbi.github.io/2020/03/12/Booster/ajax/index.html">
 <meta property="og:site_name" content="Kungbi&#39;s IT Blog">
-<meta property="og:description" content=".">
+<meta property="og:description" content="오늘은 서버와 클라이언트 사이에서 데이터 통신을 할 수 있게 하는 Ajax에 대해서 알아보려고 한다.">
 <meta property="og:locale" content="ko_KR">
-<meta property="og:image" content="http://kungbi.github.io/gallery/baekjoon.png">
-<meta property="article:published_time" content="2020-03-03T19:01:44.000Z">
-<meta property="article:modified_time" content="2020-03-07T21:37:53.955Z">
+<meta property="og:image" content="http://kungbi.github.io/gallery/1200px-AJAX_logo_by_gengns.svg.png">
+<meta property="article:published_time" content="2020-03-12T14:02:41.000Z">
+<meta property="article:modified_time" content="2020-03-13T21:56:22.806Z">
 <meta property="article:author" content="Woongbi Shin">
-<meta property="article:tag" content="baekjoon">
-<meta property="article:tag" content="c++">
+<meta property="article:tag" content="부스트코스">
+<meta property="article:tag" content="javascript">
+<meta property="article:tag" content="ajax">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://kungbi.github.io/gallery/baekjoon.png">
+<meta name="twitter:image" content="http://kungbi.github.io/gallery/1200px-AJAX_logo_by_gengns.svg.png">
 
 
 
@@ -85,7 +86,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.png" alt="백준 1904번 문제 - 01타일" height="28">
+                <img src="/images/logo.png" alt="[부스트코스] Ajax" height="28">
             
             </a>
         </div>
@@ -138,7 +139,7 @@
     
     <div class="card-image">
         <span class="image is-7by1">
-            <img class="thumbnail" src="/gallery/baekjoon.png" alt="백준 1904번 문제 - 01타일">
+            <img class="thumbnail" src="/gallery/1200px-AJAX_logo_by_gengns.svg.png" alt="[부스트코스] Ajax">
         </span>
     </div>
     
@@ -146,17 +147,17 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2020-03-03T19:01:44.000Z">2020-03-04</time>
+                <time class="level-item has-text-grey" datetime="2020-03-12T14:02:41.000Z">2020-03-12</time>
                 
                 <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/Dynamic-programming/">Dynamic programming</a>
+                <a class="has-link-grey -link" href="/categories/Boost-Course/">Boost Course</a>
                 </div>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    몇 초 읽기 (대략 1 단어)
+                    3분 읽기 (대략 455 단어)
                 </span>
                 
                 
@@ -165,23 +166,35 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                백준 1904번 문제 - 01타일
+                [부스트코스] Ajax
             
         </h1>
         <div class="content">
-            <p>.</p>
+            <p>오늘은 서버와 클라이언트 사이에서 데이터 통신을 할 수 있게 하는 Ajax에 대해서 알아보려고 한다.</p>
 <a id="more"></a>
 
-<img src="/gallery/baekjoon-1904.png">
+<p><span style="color:gray;font-size:0.9rem">해당 포스팅은 <a href="http://www.edwith.org/boostcourse-web" rel="external nofollow noopener noreferrer" target="_blank">커넥트재단의 edwith boostcourse - Web Programming</a>의 강의 자료를 바탕으로 작성되었습니다.</span></p>
+<h2 id="Ajax"><a href="#Ajax" class="headerlink" title="Ajax"></a>Ajax</h2><p>Ajax는 브라우저와 클라이언트와 통신을 하기 위한 기술이다. 브라우저에 데이터를 갱신할 때, 브라우저 새로코침 없이 서버로부터 데이터를 받는 것이 필요해서 만들어지게 되었다. -&gt; 더 좋은 UX를 제공할 수 있는 기술이 되었다.</p>
+<p>Ajax로 통신 할 때에는 XML, Plain Text, JSON 등 다양한 데이터 포멧으로 주고받을 수 있다. 보통은 사용이 편리한 JSON을 사용한다. JSON은 다음과 같이 구성되어있다.(key - value 형식)</p>
+<img src="/gallery/Screen Shot 2020-03-14 at 6.10.47 AM.png" style="width: 50%">
 
-<script src="https://gist.github.com/kungbi/03c32f4f224dba7b5ecc11d2fb3f7650.js"></script>
+<hr>
+<h2 id="Ajax-실행코드"><a href="#Ajax-실행코드" class="headerlink" title="Ajax 실행코드"></a>Ajax 실행코드</h2><h3 id="get-전송"><a href="#get-전송" class="headerlink" title="get 전송"></a>get 전송</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">reqListener</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="keyword">this</span>.responseText);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> oReq = <span class="keyword">new</span> XMLHttpRequest(); <span class="comment">// XMLHttpRequest 객체 생성</span></span><br><span class="line">oReq.addEventListener(<span class="string">"load"</span>, reqListener); <span class="comment">// callback 함수 설정</span></span><br><span class="line">oReq.open(<span class="string">"GET"</span>, <span class="string">"http://www.example.org/example.txt"</span>); <span class="comment">// Get 방식 통신</span></span><br><span class="line">oReq.send(<span class="literal">null</span>);</span><br></pre></td></tr></table></figure>
+
+<h3 id="post-전송"><a href="#post-전송" class="headerlink" title="post 전송"></a>post 전송</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">reqListener</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="keyword">this</span>.responseText);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> oReq = <span class="keyword">new</span> XMLHttpRequest(); <span class="comment">// XMLHttpRequest 객체 생성</span></span><br><span class="line">oReq.addEventListener(<span class="string">"load"</span>, reqListener); <span class="comment">// callback 함수 설정</span></span><br><span class="line">xhr.open(<span class="string">'POST'</span>, <span class="string">'https://www.zerocho.com/api/post/json'</span>); <span class="comment">// Post 방식 통신</span></span><br><span class="line">xhr.setRequestHeader(<span class="string">'Content-Type'</span>, <span class="string">'application/json'</span>); <span class="comment">// 컨텐츠타입을 json으로</span></span><br><span class="line">xhr.send(<span class="built_in">JSON</span>.stringify(data)); <span class="comment">// 데이터를 stringify해서 보냄</span></span><br></pre></td></tr></table></figure>
+
+<p>XMLHttpRequest객체를 생성해서, open메서드로 요청을 준비하고, send메서드로 서버로 보낸다.</p>
+<p>요청처리가 완료되면(서버에서 응답이 오면) load이벤트가 발생하고, 콜백함수가 실행된다.</p>
+<p>콜백함수가 실행될 때는 이미 ajax함수는 반환하고 콜스택에서 사라진 상태이다. -&gt; 비동기</p>
+<p><br></p><p align="center"><img src="/gallery/hufs_booster.jpg"></p><p></p>
+
         </div>
         
         <div class="level is-size-7 is-uppercase">
             <div class="level-start">
                 <div class="level-item">
                     <span class="is-size-6 has-text-grey has-mr-7">#</span>
-                    <a class="has-link-grey -link" href="/tags/baekjoon/" rel="tag">baekjoon</a>, <a class="has-link-grey -link" href="/tags/c/" rel="tag">c++</a>
+                    <a class="has-link-grey -link" href="/tags/ajax/" rel="tag">ajax</a>, <a class="has-link-grey -link" href="/tags/javascript/" rel="tag">javascript</a>, <a class="has-link-grey -link" href="/tags/%EB%B6%80%EC%8A%A4%ED%8A%B8%EC%BD%94%EC%8A%A4/" rel="tag">부스트코스</a>
                 </div>
             </div>
         </div>
@@ -203,17 +216,10 @@
 <div class="card card-transparent">
     <div class="level post-navigation is-flex-wrap is-mobile">
         
-        <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/2020/03/04/Algorithm/baekjoon-1932/">
-                <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">백준 1932번 문제 - 정수 삼각형</span>
-            </a>
-        </div>
-        
         
         <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/2020/03/04/Algorithm/baekjoon-1003/">
-                <span class="level-item">백준 1003번 문제 - 피보나치 함수</span>
+            <a class="level level-item has-link-grey  article-nav-next" href="/2020/03/08/Algorithm/baekjoon-1463/">
+                <span class="level-item">백준 1463번 문제 - 1로 만들기</span>
                 <i class="level-item fas fa-chevron-right"></i>
             </a>
         </div>
@@ -250,6 +256,33 @@ s.setAttribute('data-timestamp', +new Date());
 <div class="column is-4-tablet is-4-desktop is-4-widescreen  has-order-3 column-right is-sticky">
     
         
+
+    <div class="card widget" id="toc">
+        <div class="card-content">
+            <div class="menu">
+                <h3 class="menu-label">
+                    카탈로그
+                </h3>
+                <ul class="menu-list"><li>
+        <a class="is-flex" href="#Ajax">
+        <span class="has-mr-6">1</span>
+        <span>Ajax</span>
+        </a></li><li>
+        <a class="is-flex" href="#Ajax-실행코드">
+        <span class="has-mr-6">2</span>
+        <span>Ajax 실행코드</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#get-전송">
+        <span class="has-mr-6">2.1</span>
+        <span>get 전송</span>
+        </a></li><li>
+        <a class="is-flex" href="#post-전송">
+        <span class="has-mr-6">2.2</span>
+        <span>post 전송</span>
+        </a></li></ul></li></ul>
+            </div>
+        </div>
+    </div>
 
     
         
@@ -351,7 +384,7 @@ s.setAttribute('data-timestamp', +new Date());
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.png" alt="백준 1904번 문제 - 01타일" height="28">
+                    <img src="/images/logo.png" alt="[부스트코스] Ajax" height="28">
                 
                 </a>
                 <p class="is-size-7">
