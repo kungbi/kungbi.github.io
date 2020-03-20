@@ -8,6 +8,13 @@
     </url>
 
     <url>
+        <loc>http://kungbi.github.io/categories/Boost-Course/</loc>
+        <lastmod>2020-03-20T12:11:25.409Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>http://kungbi.github.io/categories/Algorithm/Brute-Force/</loc>
         <lastmod>2020-03-13T22:17:29.109Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -24,13 +31,6 @@
     <url>
         <loc>http://kungbi.github.io/categories/Algorithm/Divide-and-Conquer/</loc>
         <lastmod>2020-03-13T22:14:08.259Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://kungbi.github.io/categories/Boost-Course/</loc>
-        <lastmod>2020-03-13T21:56:22.806Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

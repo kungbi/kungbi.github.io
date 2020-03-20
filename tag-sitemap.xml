@@ -3,6 +3,27 @@
 
 
     <url>
+        <loc>http://kungbi.github.io/tags/javascript/</loc>
+        <lastmod>2020-03-20T12:11:25.409Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://kungbi.github.io/tags/jsp/</loc>
+        <lastmod>2020-03-20T12:11:25.409Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://kungbi.github.io/tags/%25EB%25B6%2580%25EC%258A%25A4%25ED%258A%25B8%25EC%25BD%2594%25EC%258A%25A4/</loc>
+        <lastmod>2020-03-20T12:11:25.409Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>http://kungbi.github.io/tags/Brute-Force/</loc>
         <lastmod>2020-03-13T22:17:29.109Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -32,20 +53,6 @@
 
     <url>
         <loc>http://kungbi.github.io/tags/ajax/</loc>
-        <lastmod>2020-03-13T21:56:22.806Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://kungbi.github.io/tags/javascript/</loc>
-        <lastmod>2020-03-13T21:56:22.806Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://kungbi.github.io/tags/%25EB%25B6%2580%25EC%258A%25A4%25ED%258A%25B8%25EC%25BD%2594%25EC%258A%25A4/</loc>
         <lastmod>2020-03-13T21:56:22.806Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
@@ -138,13 +145,6 @@
     <url>
         <loc>http://kungbi.github.io/tags/servlet/</loc>
         <lastmod>2020-03-07T21:39:44.730Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://kungbi.github.io/tags/jsp/</loc>
-        <lastmod>2020-03-07T21:39:36.710Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
